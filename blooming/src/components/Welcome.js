@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Greeting(props) {
+export function Welcome(props) {
     return (
         <div className="container">
         <h2 className="greeting">Welcome Back, !</h2>

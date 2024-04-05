@@ -5,7 +5,7 @@ import { NavBar } from './components/NavBar';
 import { Welcome } from './components/Welcome';
 
 
-function App() {
+export function App() {
   return (
     <Routes>
       <Route path="" element={<HomePage />} />
@@ -34,9 +34,9 @@ function DashboardPage(props) {
         <Welcome/>
       </section>
       <section>
-        <Topics/>
+        {/* <Topics/>
         <DashboardModules/>
-        <RecArticles/>
+        <RecArticles/> */}
       </section>
     </div>
   );
@@ -59,6 +59,14 @@ function QuizzesPage(props) {
 }
 
 function ProfilePage(props) {
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
+}
+
+function AboutPage(props) {
   return (
     <div>
       <NavBar/>
