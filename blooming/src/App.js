@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
+import { NavBar } from './components/NavBar';
+import { Welcome } from './components/Welcome';
+
 
 function App() {
   return (
@@ -12,6 +15,54 @@ function App() {
       <Route path="profile" element={ <ProfilePage />} />
       <Route path="about" element={ <AboutPage />} />
     </Routes>
+  );
+}
+
+function HomePage(props) {
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
+}
+
+function DashboardPage(props) {
+  return (
+    <div>
+      <NavBar/>
+      <section>
+        <Welcome/>
+      </section>
+      <section>
+        <Topics/>
+        <DashboardModules/>
+        <RecArticles/>
+      </section>
+    </div>
+  );
+}
+
+function ModulesPage(props) {
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
+}
+
+function QuizzesPage(props) {
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
+}
+
+function ProfilePage(props) {
+  return (
+    <div>
+      <NavBar/>
+    </div>
   );
 }
 
