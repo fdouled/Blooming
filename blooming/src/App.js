@@ -3,6 +3,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
 import { Welcome } from './components/Welcome';
+import { Topics } from './components/Topics';
 
 
 export function App() {
@@ -34,8 +35,8 @@ function DashboardPage(props) {
         <Welcome/>
       </section>
       <section>
-        {/* <Topics/>
-        <DashboardModules/>
+        <Topics/>
+        {/* <DashboardModules/>
         <RecArticles/> */}
       </section>
     </div>
