@@ -1,8 +1,9 @@
-import logo from './logo.svg';
+import logo from './favicon.ico';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
-import { Welcome } from './components/Welcome';
+import { AboutPage } from './components/AboutPage';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export function App() {
@@ -30,9 +31,9 @@ function DashboardPage(props) {
   return (
     <div>
       <NavBar/>
-      <section>
+      {/* <section>
         <Welcome/>
-      </section>
+      </section> */}
       <section>
         {/* <Topics/>
         <DashboardModules/>
@@ -59,14 +60,6 @@ function QuizzesPage(props) {
 }
 
 function ProfilePage(props) {
-  return (
-    <div>
-      <NavBar/>
-    </div>
-  );
-}
-
-function AboutPage(props) {
   return (
     <div>
       <NavBar/>
