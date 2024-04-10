@@ -7,7 +7,7 @@ export function Topics(props) {
   // console.log(props);
   // console.log(cardInfo);
   const topics = topicsList.map((topic) => {
-    return <button>{topic}</button>
+    return <span className='topic'>{topic}</span>
   });
 
   return (

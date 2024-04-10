@@ -1,25 +1,38 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../img/blooming-logo.png'
 
 export function NavBar(props) {
   // const [displayLinks, setDisplay] = useState(null);
 
   return (
-    <header id="home-header">
-            <div className="container">
-              <h1>Cypher</h1>
-              <div id="hamburger-menu"><a href="#"><i class="fa fa-bars" aria-label="menu"></i></a></div>
-              <nav>
-              <ul>
-                <li className="link"><Link to={"/"}>BLOOMING</Link></li>
-                <li className="link"><Link to={"/dashboard"}>Dashboard</Link></li>
-                <li className="link"><Link to={"/modules"}>Modules</Link></li>
-                <li className="link"><Link to={"/quizzes"}>Quizzes</Link></li>
-                <li className="link"><Link to={"/profile"}>Profile</Link></li>
-                <li className="link"><Link to={"/about"}>About</Link></li>
-              </ul>
-              </nav>
-            </div>
-          </header>
+              <nav className="navbar navbar-expand-lg navbar-light navbar-color">
+    <Link className="navbar-brand" to={"/"}>
+        <img src={logo} width="30" height="30" className="d-inline-block align-top" alt=""/>
+        BLOOMING
+      </Link>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <Link className="nav-link" to={"/profile"}>Profile</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/dashboard"}>Dashboard</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to={"/learn"}>Learn</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to={"/quiz"}>Quiz</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to={"/about"}>About</Link>
+        </li>
+      </ul>
+    </div>
+  </nav>
   );
 }

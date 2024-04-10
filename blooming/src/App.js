@@ -1,9 +1,11 @@
-import logo from './logo.svg';
+import logo from './favicon.ico';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar';
-import { Welcome } from './components/Welcome';
-import { Topics } from './components/Topics';
+import { DashboardPage } from './components/DashboardPage';
+import { ProfilePage } from './components/ProfilePage';
+import { AboutPage } from './components/AboutPage';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 export function App() {
@@ -11,8 +13,8 @@ export function App() {
     <Routes>
       <Route path="" element={<HomePage />} />
       <Route path="dashboard" element={ <DashboardPage />} />
-      <Route path="modules" element={ <ModulesPage />} />
-      <Route path="quizzes" element={ <QuizzesPage />} />
+      <Route path="learn" element={ <LearnPage />} />
+      <Route path="quiz" element={ <QuizPage />} />
       <Route path="profile" element={ <ProfilePage />} />
       <Route path="about" element={ <AboutPage />} />
     </Routes>
@@ -27,23 +29,7 @@ function HomePage(props) {
   );
 }
 
-function DashboardPage(props) {
-  return (
-    <div>
-      <NavBar/>
-      <section>
-        <Welcome/>
-      </section>
-      <section>
-        <Topics/>
-        {/* <DashboardModules/>
-        <RecArticles/> */}
-      </section>
-    </div>
-  );
-}
-
-function ModulesPage(props) {
+function LearnPage(props) {
   return (
     <div>
       <NavBar/>
@@ -51,23 +37,7 @@ function ModulesPage(props) {
   );
 }
 
-function QuizzesPage(props) {
-  return (
-    <div>
-      <NavBar/>
-    </div>
-  );
-}
-
-function ProfilePage(props) {
-  return (
-    <div>
-      <NavBar/>
-    </div>
-  );
-}
-
-function AboutPage(props) {
+function QuizPage(props) {
   return (
     <div>
       <NavBar/>

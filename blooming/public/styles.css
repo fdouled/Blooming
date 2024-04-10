@@ -1,0 +1,99 @@
+body {
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 30px;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.logo {
+  margin-right: auto;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  margin-left: 450px;
+  display: flex;
+}
+.navbar li {
+  margin-left: 50px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-color {
+  background-color: #D4A373
+}
+
+h1, h2, h3 {
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.about-container, .faq-container, .contact-container {
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgba(212, 163, 115, 0.171);
+}
+
+.about-container {
+  margin-left: -120px;
+}
+
+.about-img {
+  margin-left: 100px;
+}
+
+.topic, .moods {
+  padding: 8px 20px;
+  gap: 4px;
+  margin: 5px;
+  background: rgba(212, 163, 115, 0.4);
+  border: 2px solid #000000;
+  border-radius: 32px;
+/* box-sizing: border-box; */
+}
+
+.dashButton {
+  margin: 2%;
+  background-color: #c7e3d0;
+  border: none;
+  padding: 5vh;
+  border-radius: 123px;
+  font-size: 1.5em;
+}
+
+.next {
+  width: 1.5em;
+}
+
+.profile-heading {
+  margin-bottom: 0px;
+}
+
+.welcome-subtext {
+  color: #979CA5;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+.profile-button {
+  background: #BBE6CA;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+}
