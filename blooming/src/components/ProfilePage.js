@@ -10,12 +10,13 @@ export function ProfilePage(props) {
       <div>
         <section>
           <h1 className="profile-heading">Overview</h1>
-          <span className="welcome-subtext">Welcome back, Jessica! Your progress is really great so far. Keep it up!</span>
+          <span className="subtext">Welcome back, Jessica! Your progress is really great so far. Keep it up!</span>
         </section>
         <section>
           <h2>Your Quiz Stats</h2>
           <div>
-            67% AVERAGE SCORE higher than 84% of users
+
+            <p>67% AVERAGE SCORE higher than 84% of users</p>
           </div>
           <h2>Your Reflections Stats</h2>
           <button className="profile-button">Edit or view posts</button>
