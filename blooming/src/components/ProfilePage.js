@@ -7,7 +7,7 @@ export function ProfilePage(props) {
   return (
     <div>
       <NavBar/>
-      <div>
+      <div className="container">
         <section>
           <h1 className="profile-heading">Overview</h1>
           <span className="subtext">Welcome back, Jessica! Your progress is really great so far. Keep it up!</span>

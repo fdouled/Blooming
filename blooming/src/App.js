@@ -16,9 +16,8 @@ export function App() {
       <Route path="" element={<HomePage />} />
       <Route path="dashboard" element={ <DashboardPage />} />
       <Route path="learn" element={ <LearnPage />} />
-      <Route path="quiz" element={ <QuizPage />}>
-        <Route path='module-quiz' element={<Quiz />} />
-      </Route>
+      <Route path="quiz" element={ <QuizPage />}></Route>
+      <Route path='module-quiz' element={<Quiz />} />
       <Route path="profile" element={ <ProfilePage />} />
       <Route path="about" element={ <AboutPage />} />
     </Routes>
