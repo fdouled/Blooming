@@ -9,15 +9,15 @@ export function QuizQuestion(props) {
     <div>
         <p>{questionObj.question}</p>
         <div>
-          <input type="radio" name="drone" value={questionObj.answers[0]}/>
+          <input type="radio" name={questionObj.questionId} value={questionObj.answers[0]}/>
           <label for={questionObj.answers[0]}>{questionObj.answers[0]}</label>
         </div>
         <div>
-          <input type="radio" name="drone" value={questionObj.answers[1]}/>
+          <input type="radio" name={questionObj.questionId} value={questionObj.answers[1]}/>
           <label for={questionObj.answers[1]}>{questionObj.answers[1]}</label>
         </div>
         <div>
-          <input type="radio" name="drone" value={questionObj.answers[2]}/>
+          <input type="radio" name={questionObj.questionId} value={questionObj.answers[2]}/>
           <label for={questionObj.answers[2]}>{questionObj.answers[2]}</label>
         </div>
     </div>

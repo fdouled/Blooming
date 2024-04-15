@@ -21,7 +21,7 @@ export function QuizPage(props) {
           <h5 className="card-title">Module One: Menstural Cycle</h5>
           <p className="card-text">This quiz will test you on your knowledge of your menstrual health, how to maintain hygiene and more.</p>
           <Link to={'/module-quiz'}>
-            <button className="profile-button">Start</button>
+            <button className="button">Start</button>
           </Link>
         </div>
       </div>

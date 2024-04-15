@@ -2,6 +2,7 @@ import React from "react";
 import { NavBar } from "./NavBar";
 // import { Welcome } from './components/Welcome';
 import { Topics } from "./Topics";
+import { Link } from "react-router-dom";
 import next from '../img/chevron-right.svg'
 
 export function DashboardPage(props) {
@@ -11,8 +12,9 @@ export function DashboardPage(props) {
       <div className="container">
         <section>
           <h1>Welcome Back, Jessica!</h1>
-          <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
-          {/* <img></img> */}
+          <Link to={"/profile"}>
+            <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
+          </Link>
         </section>
         <section>
           <h2>Selected Topics of Interest</h2>

@@ -19,7 +19,7 @@ export function ProfilePage(props) {
             <p>67% AVERAGE SCORE higher than 84% of users</p>
           </div>
           <h2>Your Reflections Stats</h2>
-          <button className="profile-button">Edit or view posts</button>
+          <button className="button">Edit or view posts</button>
         </section>
         <section>
           <h2>Topics of Interest</h2>
@@ -29,7 +29,7 @@ export function ProfilePage(props) {
         </section>
         <section>
           <h3>How are you feeling?</h3>
-          <button className="profile-button">View tracker</button>
+          <button className="button">View tracker</button>
           <h3>What has affected your mood most recently?</h3>
           <Moods/>
         </section>

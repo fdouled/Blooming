@@ -8,7 +8,7 @@ export function Card(props) {
       <div className="card-body">
         <h5 className="card-title">{card.title}</h5>
         <p className="card-text">{card.desc}</p>
-        <a href="#"> <button className='profile-button'>Start Module</button></a>
+        <a href="#"> <button className='button'>Start Module</button></a>
       </div>
     </div>
   );

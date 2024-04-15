@@ -86,19 +86,26 @@ h1, h2, h3 {
   margin-top: 0px;
 }
 
-.profile-button {
+.button {
   background: #BBE6CA;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #BBE6CA;
+  margin-right: 0.5em;
+  transition: 0.15s;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.submit-button {
-  background: #BBE6CA;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: none;
-  align-self: center;
+.button:hover {
+  background: #b3d5be;
 }
 
 .card {
