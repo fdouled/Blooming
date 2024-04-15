@@ -7,6 +7,7 @@ import { ProfilePage } from './components/ProfilePage';
 import { AboutPage } from './components/AboutPage';
 import { QuizPage } from './components/QuizPage';
 import { Quiz } from './components/Quiz';
+import { LearnPage } from './components/LearnPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -25,14 +26,6 @@ export function App() {
 }
 
 function HomePage(props) {
-  return (
-    <div>
-      <NavBar/>
-    </div>
-  );
-}
-
-function LearnPage(props) {
   return (
     <div>
       <NavBar/>

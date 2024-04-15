@@ -1,7 +1,6 @@
 import React from "react";
 import { NavBar } from "./NavBar";
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 
 // const quizzes = [{title: "Module One: Menstrual Cycle",
 // questions:["Fill in the blanks: The menstrual cycle is a ___ and is controlled by many different __ and the hormones they produce",
@@ -22,7 +21,7 @@ export function QuizPage(props) {
           <h5 className="card-title">Module One: Menstural Cycle</h5>
           <p className="card-text">This quiz will test you on your knowledge of your menstrual health, how to maintain hygiene and more.</p>
           <Link to={'/module-quiz'}>
-            <Button variant="secondary">Start</Button>
+            <button className="profile-button">Start</button>
           </Link>
         </div>
       </div>
