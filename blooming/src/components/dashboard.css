@@ -35,5 +35,14 @@
   stroke: gray;
 }
 
+.article-link {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.article-link:hover {
+  text-decoration: none;
+}
+
 
   

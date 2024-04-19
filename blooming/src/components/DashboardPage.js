@@ -107,13 +107,16 @@ export function DashboardPage(props) {
               <div class="row">
                 <div class="column col-6">
                   <div class="article-tile">
-                    <h3>Menstrual Hygiene Management: Best Practices for Health and Comfort</h3>
+                    <h3><a class="article-link" href="https://www.cdc.gov/hygiene/personal-hygiene/menstrual.html#:~:text=Practice%20Healthy%20Habits%20During%20Your,stay%20comfortable%20during%20your%20period.&text=Wash%20your%20hands%20before%20and,before%20using%20a%20menstrual%20product." target="_blank">
+                    Menstrual Hygiene Management: Best Practices for Health and Comfort
+                    </a></h3>
                     <p>Posted Yesterday</p>
                   </div>
                 </div>
                 <div class="column col-6">
                   <div class="article-tile">
-                    <h3>Managing Menstrual Pain: Effective Strategies and Relief Techniques</h3>
+                    <h3><a class="article-link" href="https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944" target="_blank">
+                      Managing Menstrual Pain: Effective Strategies and Relief Techniques</a></h3>
                     <p>Posted Last Week</p>
                   </div>
                 </div>
