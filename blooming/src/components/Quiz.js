@@ -3,7 +3,7 @@ import { NavBar } from "./NavBar";
 import { QuizQuestion } from "./QuizQuestion";
 
 const quiz = [{questionId: "0", question: "Fill in the blanks: The menstrual cycle is a ___ and is controlled by many different __ and the hormones they produce",
-answers: ["complex cycle; glands", "glands; complex cycle", "simple cycle; organs"], correct: 0},
+answers: ["Complex cycle; glands", "Glands; complex cycle", "Simple cycle; organs"], correct: 0},
 {questionId: "1", question: "What are the four phases of the menstrual cycle?",
 answers: ["The preparation phase, the release phase, the luteal phase, the shedding phase", "Menstruation, the follicular phase, ovulation, the luteal phase",
 "The quiet phase, ovulation, the maintenence phase, the reset phase"], correct: 1},
@@ -25,17 +25,17 @@ answers: ["You have cravings for certain foods.",
 answers: ["Pads", "Menstrual cup, tampons", "Period underwear"], correct: 1},
 {questionId: "8", question: "Fill in the blank: You must change tampons every __ to __ hours",
 answers: ["4 - 8 hours", "12 - 14 hours", "2 - 3 hours"], correct: 0},
-{questionId: "8", question: "How should you discard used disposable menstrual products?",
+{questionId: "9", question: "How should you discard used disposable menstrual products?",
 answers: ["Wrap them with toilet paper, a tissue, or other material and then toss in a trash bin.",
  "Dispose of them in public recycling bins to reduce waste in landfills.",
  "Wrap them with toilet paper, a tissue, or other material and then flush them down the toilet."], correct: 1},
-{questionId: "8", question: "True or false: Your menstrual cycle affects your ability to exercise",
+{questionId: "10", question: "True or false: Your menstrual cycle affects your ability to exercise",
 answers: ["True", "False", "Neither true nor false. It depends on the person"], correct: 1},
-{questionId: "8", question: "Define premenstrual syndrome (PMS)",
+{questionId: "11", question: "Define premenstrual syndrome (PMS)",
 answers: ["PMS is a hormonal disorder characterized by the absence of mood swings, irritability, and physical discomfort in the days leading up to menstruation.",
 "PMS is a combination of physical and emotional symptoms that many women get after ovulation and before the start of their menstrual period.",
 "Premenstrual syndrome is a condition where individuals experience decreased appetite and weight loss prior to their menstrual period."], correct: 1},
-{questionId: "8", question: "Which of these is not an over-the-counter medicine that helps with PMS symptoms?",
+{questionId: "12", question: "Which of these is not an over-the-counter medicine that helps with PMS symptoms?",
 answers: ["Ibuprofen", "Aspirin", "Hormonal"], correct: 1}]
 
 export function Quiz(props) {
@@ -47,6 +47,8 @@ export function Quiz(props) {
     document.getElementById("questions").classList.add("d-none");
     document.getElementById("results").classList.remove("d-none");
     document.getElementById("back-button").classList.remove("d-none");
+    document.getElementById("submit-button").classList.add("d-none");
+    document.getElementById("retry-button").classList.remove("d-none");
   }
 
   return (
@@ -63,7 +65,8 @@ export function Quiz(props) {
           <p>Great work!</p>
           <p>You got __ out of __ questions correct!</p>
         </div>
-        <button className="button" onClick={submitQuiz}>Submit</button>
+        <button className="button" id="submit-button" onClick={submitQuiz}>Submit</button>
+        <button className="button d-none" id="retry-button">Retry</button>
         <a href="/quiz" className="btn btn-secondary d-none" id="back-button">Go Back</a>
       </div>
     </div>

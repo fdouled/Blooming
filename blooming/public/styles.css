@@ -114,3 +114,9 @@ h1, h2, h3 {
 .learn-page-header {
   background-image: url(../src/img/learn-background.png);
 }
+
+/* #results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
