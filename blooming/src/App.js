@@ -10,7 +10,6 @@ import { Quiz } from './components/Quiz';
 import { LearnPage } from './components/LearnPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 export function App() {
   return (
     <Routes>

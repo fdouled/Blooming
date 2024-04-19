@@ -1,0 +1,39 @@
+.moduleTile {
+  display: flex;
+  align-items: center;
+  background-color: white !important;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 8px 8px 40px #0000001a;
+  border-style: none !important; 
+}
+
+.moduleInfo {
+  flex: 1;
+}
+
+.moduleicon {
+  margin-right: 10px;
+}
+
+.article-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-tile {
+  padding: 10px;
+  background-color: rgba(212, 163, 115, 0.2);
+  border-radius: 30px;
+  box-sizing: border-box; 
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.CircularProgressbar-trail {
+  stroke: gray;
+}
+
+
+  

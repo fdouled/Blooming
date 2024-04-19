@@ -4,6 +4,12 @@ import { NavBar } from "./NavBar";
 import { Topics } from "./Topics";
 import { Link } from "react-router-dom";
 import next from '../img/chevron-right.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faFileClipboard } from '@fortawesome/free-regular-svg-icons';
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import './dashboard.css';
+
 
 export function DashboardPage(props) {
   return (
@@ -22,13 +28,99 @@ export function DashboardPage(props) {
         </section>
         <section>
           <h2>Current Modules</h2>
-
-          <h2>Modules to Explore</h2>
-        </section>
-        <section>
-          <h2>Recommended Articles</h2>
-        </section>
+            <div className="moduleTile">
+              <div className="moduleInfo">
+                <h3>Menstrual Health</h3>
+                <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />7:20hr</span>
+                <span className="space-between"></span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />20 Lessons</span>
+              </div>
+              <div style={{ width: 130, height: 130 }}>
+                    <CircularProgressbarWithChildren value={20}>
+                      <div style={{ textAlign: 'center', margin: 10, fontSize: 12}}>
+                        <strong>Status</strong><br />
+                          4 of 20<br />
+                          Lessons Completed
+                        </div>
+                    </CircularProgressbarWithChildren>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Modules to Explore</h2>
+            <div className="moduleTile">
+              <div className="moduleInfo">
+                <h3>Reproductive System Disorders</h3>
+                <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />3:50hr</span>
+                <span className="space-between"></span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />16 Lessons</span>
+              </div>
+              <div style={{ width: 130, height: 130}}>
+                <CircularProgressbarWithChildren value={1/16}>
+                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
+                    <strong>Status</strong><br />
+                      1 of 16<br />
+                      Lessons Completed
+                    </div>
+                </CircularProgressbarWithChildren>
+              </div>
+            </div>
+            <div className="moduleTile">
+              <div className="moduleInfo">
+                <h3>Sexual Health</h3>
+                <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />3:00hr</span>
+                <span className="space-between"></span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />8 Lessons</span>
+              </div>
+              <div style={{ width: 130, height: 130 }}>
+                <CircularProgressbarWithChildren value={0/8}>
+                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
+                    <strong>Status</strong><br />
+                      0 of 8<br />
+                      Lessons Completed
+                    </div>
+                </CircularProgressbarWithChildren>
+              </div>
+            </div>
+            <div className="moduleTile">
+              <div className="moduleInfo">
+                <h3>Contraception and Family Planning</h3>
+                <i className="far fa-clock"></i>
+                <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />4:00hr</span>
+                <span className="space-between"></span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}}/>10 Lessons</span>
+              </div>
+              <div style={{ width: 130, height: 130 }}>
+                <CircularProgressbarWithChildren value={20}>
+                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
+                    <strong>Status</strong><br />
+                      2 of 10<br />
+                      Lessons Completed
+                    </div>
+                </CircularProgressbarWithChildren>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>Recommended Articles</h2>
+            <div class="article-container">
+              <div class="row">
+                <div class="column col-6">
+                  <div class="article-tile">
+                    <h3>Menstrual Hygiene Management: Best Practices for Health and Comfort</h3>
+                    <p>Posted Yesterday</p>
+                  </div>
+                </div>
+                <div class="column col-6">
+                  <div class="article-tile">
+                    <h3>Managing Menstrual Pain: Effective Strategies and Relief Techniques</h3>
+                    <p>Posted Last Week</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
   );
 }

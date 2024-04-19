@@ -1,0 +1,37 @@
+.moduleTile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .moduleInfo {
+    flex: 1;
+  }
+  
+  .progressIndicator {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progressCircle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .space-between {
+    margin: 40px;
+  }
+
+
+  
+  

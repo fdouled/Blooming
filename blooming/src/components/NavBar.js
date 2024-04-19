@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import logo from '../img/blooming-logo.png'
 
 export function NavBar(props) {
-  // const [displayLinks, setDisplay] = useState(null);
 
   return (
               <nav className="navbar navbar-expand-lg navbar-light navbar-color">
-    <Link className="navbar-brand" to={"/"}>
+    <Link className="navbar-brand" to={"/dashboard"}>
         <img src={logo} width="30" height="30" className="d-inline-block align-top" alt=""/>
         BLOOMING
       </Link>
