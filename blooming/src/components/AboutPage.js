@@ -1,11 +1,11 @@
 import React from "react";
-import { NavBar } from "./Navigation";
+import { NavBar } from "./NavBar";
 import { Link } from "react-router-dom";
 
 export function AboutPage(props) {
     return (
         <div>
-            <NavBar /> 
+            <NavBar />
             <div className="container">
                 <h1 className="text-center">About Blooming</h1>
                 <div className="row">
