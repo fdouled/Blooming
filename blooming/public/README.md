@@ -5,7 +5,7 @@ To make edits to our code in the future, there are some steps you must take to m
 - Get the SSH or HTTPS url from the GitHub page. It can be found when you click the green  (< > Code) button. 
 - Once you have copied the SSH or HTTPS url, open Terminal to create a folder for the project. 
 - Here are the steps to  clone the repo to your personal computer:
-- - Use the git clone command and paste in the  SSH or HTML url (git@github.com:fdouled/Blooming.git) 
+  - Use the git clone command and paste in the  SSH or HTML url (git@github.com:fdouled/Blooming.git) 
 - Once you run the command in Terminal, you should have access to the code files to make edits. 
 
 #### Links to other sites from Blooming 
