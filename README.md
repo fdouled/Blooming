@@ -36,7 +36,7 @@ To make edits to our code in the future, there are some steps you must take to m
 
 #### Links to other sites from Blooming 
 Presentation deck: INFO 491 Blooming Final Presentation Slides
-Final product
+Final product: https://blooming-960e3.web.app/
 GitHub repository: https://github.com/fdouled/Blooming
 Post-Graduation Contact: jamilah.sal34@gmail.com
 
