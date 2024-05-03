@@ -39,13 +39,20 @@ answers: ["PMS is a hormonal disorder characterized by the absence of mood swing
 "PMS is a condition where individuals experience decreased appetite and weight loss prior to their menstrual period."],
 correct: "PMS is a combination of physical and emotional symptoms that many women get after ovulation and before the start of their menstrual period."},
 {question: "Which of these is not an over-the-counter medicine that helps with PMS symptoms?",
-answers: ["Ibuprofen", "Aspirin", "Hormonal"], correct: "Hormonal"}]
+answers: ["Ibuprofen", "Aspirin", "Hormonal"], correct: "Hormonal"}];
+
+const resultInitState = {
+  score: 0,
+  correctAnswers: 0,
+  wrongAnswers: 0
+};
 
 export function Quiz(props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answerIdx, setAnswerIdx] = useState(null);
   const [answer, setAnswer] = useState(null);
-  const [result, setResult] = useState();
+  const [result, setResult] = useState(resultInitState);
+  const [showResult, setShowResult] = useState(false);
 
   const {question, answers, correct} = quiz[currentQuestion];
 
@@ -58,17 +65,47 @@ export function Quiz(props) {
     }
   };
 
-  function nextClick() {
+  const nextClick = () => {
     setAnswerIdx(null);
+    setResult((prev) =>
+      answer
+       ? {
+          ...prev,
+          score: prev.score + 5,
+          correctAnswers: prev.correctAnswers + 1
+       } : {
+          ...prev,
+          wrongAnswers: prev.wrongAnswers + 1
+       }
+    );
 
+    if (currentQuestion !== quiz.length - 1) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setCurrentQuestion(0);
+      setShowResult(true);
+    }
   }
 
-  function submitQuiz(event) {
-    document.getElementById("questions").classList.add("d-none");
-    document.getElementById("results").classList.remove("d-none");
-    document.getElementById("back-button").classList.remove("d-none");
-    document.getElementById("submit-button").classList.add("d-none");
-    document.getElementById("retry-button").classList.remove("d-none");
+  const prevClick = () => {
+    setAnswerIdx(null);
+    setResult((prev) =>
+      answer
+       ? {
+          ...prev,
+          score: prev.score - 5,
+          correctAnswers: prev.correctAnswers - 1
+       } : {
+          ...prev,
+          wrongAnswers: prev.wrongAnswers - 1
+       }
+    );
+
+    if (currentQuestion !== 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    } else {
+      setCurrentQuestion(0);
+    }
   }
 
   return (
@@ -79,10 +116,10 @@ export function Quiz(props) {
       </header>
       <hr/>
       <div className="container">
-        <h4 className="text-center">
-          <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{quiz.length}</span>
-        </h4>
         <div id="question">
+          <h4 className="text-center">
+            <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{quiz.length}</span>
+          </h4>
           <h2 className="text-center">{question}</h2>
           <ul className="answer-choices">
             {answers.map((answer, index) => {
@@ -93,18 +130,19 @@ export function Quiz(props) {
               )
             })}
           </ul>
-        </div>
-        <div className="footer">
+          <div className="footer">
+            <button onClick={prevClick} disabled={currentQuestion === 0} className="button">Previous</button>
             <button onClick={nextClick} disabled={answerIdx === null} className="button">
               {currentQuestion === quiz.length - 1 ? "Finish" : "Next"}
             </button>
+          </div>
         </div>
         <div id="results" className="d-none">
           <p>Great work!</p>
           <p>You got __ out of __ questions correct!</p>
+          <button className="button" id="retry-button">Retry</button>
+          <a href="/quiz" className="btn btn-secondary" id="back-button">Go Back</a>
         </div>
-        <button className="button d-none" id="retry-button">Retry</button>
-        <a href="/quiz" className="btn btn-secondary d-none" id="back-button">Go Back</a>
       </div>
     </div>
   );
