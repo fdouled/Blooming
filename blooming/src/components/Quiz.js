@@ -1,14 +1,13 @@
 import React from "react";
 import { NavBar } from "./NavBar";
-import { QuizQuestion } from "./QuizQuestion";
 import { useState } from "react";
 
-const quiz = [{question: "Fill in the blanks: The menstrual cycle is a ___ and is controlled by many different __ and the hormones they produce",
+const quiz = [{question: "Fill in the blanks: The menstrual cycle is a _ and is controlled by many different _ and the hormones they produce",
 answers: ["Complex cycle; glands", "Glands; complex cycle", "Simple cycle; organs"], correct: "Complex cycle; glands"},
 {question: "What are the four phases of the menstrual cycle?",
 answers: ["The preparation phase, the release phase, the luteal phase, the shedding phase", "Menstruation, the follicular phase, ovulation, the luteal phase",
 "The quiet phase, ovulation, the maintenence phase, the reset phase"], correct: "Menstruation, the follicular phase, ovulation, the luteal phase"},
-{question: "Fill in the blanks: __ days is the average length of a menstrual cycle while __ is the average age for a first period",
+{question: "Fill in the blanks: _ days is the average length of a menstrual cycle while _ is the average age for a first period",
 answers: ["29  - 30 days, 14 - 16", "28 - 29 days, 12 - 13", "25 - 27 days, 11 - 13"], correct: "28 - 29 days, 12 - 13"},
 {question: "What happens during menstruation?",
 answers: ["Your uterus lining sheds and flows out of your vagina.", "Your ovary releases an egg into the falopian tube.", "The body expels excess iron from the bloodstream through vaginal bleeding."],
@@ -26,7 +25,7 @@ answers: ["You have cravings for certain foods.",
 "You bleed between periods."], correct: "You bleed between periods."},
 {question: "What menstrual hygiene products require insertion?",
 answers: ["Pads", "Tampons", "Period underwear"], correct: "Tampons"},
-{question: "Fill in the blank: You must change tampons every __ to __ hours",
+{question: "Fill in the blank: You must change tampons every _ to _ hours",
 answers: ["4 - 8 hours", "12 - 14 hours", "2 - 3 hours"], correct: "4 - 8 hours"},
 {question: "How should you discard used disposable menstrual products?",
 answers: ["Wrap them with toilet paper, a tissue, or other material and then toss in a trash bin.",
@@ -50,7 +49,7 @@ export function Quiz(props) {
 
   const {question, answers, correct} = quiz[currentQuestion];
 
-  function answerClick(answer, index) {
+  const answerClick = (answer, index) => {
     setAnswerIdx(index);
     if (answer === correct) {
       setAnswer(true);
@@ -80,15 +79,15 @@ export function Quiz(props) {
       </header>
       <hr/>
       <div className="container">
-        <h3 className="text-center">
+        <h4 className="text-center">
           <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{quiz.length}</span>
-        </h3>
+        </h4>
         <div id="question">
           <h2 className="text-center">{question}</h2>
-          <ul>
+          <ul className="answer-choices">
             {answers.map((answer, index) => {
               return (
-                <li onClick={answerClick} key={answer} className={answerIdx === index ? "selected-answer" : null}>
+                <li onClick={()=>answerClick(answer, index)} key={answer} className={answerIdx === index ? "selected-answer" : null}>
                   {answer}
                 </li>
               )
@@ -96,15 +95,14 @@ export function Quiz(props) {
           </ul>
         </div>
         <div className="footer">
-            <button onClick={nextClick} disabled={answerIdx}>
-              Next
+            <button onClick={nextClick} disabled={answerIdx === null} className="button">
+              {currentQuestion === quiz.length - 1 ? "Finish" : "Next"}
             </button>
         </div>
         <div id="results" className="d-none">
           <p>Great work!</p>
           <p>You got __ out of __ questions correct!</p>
         </div>
-        <button className="button" id="submit-button" onClick={submitQuiz}>Submit</button>
         <button className="button d-none" id="retry-button">Retry</button>
         <a href="/quiz" className="btn btn-secondary d-none" id="back-button">Go Back</a>
       </div>

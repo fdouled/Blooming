@@ -115,6 +115,28 @@ h1, h2, h3 {
   background-image: url(../src/img/learn-background.png);
 }
 
+.answer-choices {
+  margin-top: 20px;
+  margin-left: -40px;
+
+  li {
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    border: 1px solid gray;
+    border-radius: 16px;
+    padding: 11px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  .selected-answer {
+    background-color: #93c1a1;
+    color: #fffaf4;
+    border: 1px solid #5b8567;
+  }
+}
+
 /* #results {
   display: flex;
   justify-content: center;
