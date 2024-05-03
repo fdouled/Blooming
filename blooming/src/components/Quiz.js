@@ -56,7 +56,7 @@ export function Quiz(props) {
     } else {
       setAnswer(false);
     }
-  }
+  };
 
   function nextClick() {
     setAnswerIdx(null);
