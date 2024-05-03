@@ -1,64 +1,55 @@
+/* Global Styles */
 body {
-    font-family: 'Yusei Magic', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  .logo {
-    margin-right: auto;
-  }
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    margin-left: 450px;
-    display: flex;
-  }
-  .navbar li {
-    margin-left: 50px;
-  }
-  .navbar a {
-    text-decoration: none;
-    color: #fff;
-  }
-
-  .navbar-color {
-    background-color: #D4A373
-  }
-
-  h1, h2 {
-    padding: 20px;
-    margin-top: 10px;
-  }
-
-  .about-container, .faq-container, .contact-container {
-    border-radius: 15px;
-    padding: 20px;
-    background-color: rgba(212, 163, 115, 0.171);
-  }
-
-.about-container {
-    margin-left: -120px;
+  font-family: 'Comic Sans MS', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdeaea; /* Very pale pink background color */
+  background-image: linear-gradient(135deg, #f5d5d5 0%, #f9e8ce 50%, #FFF1E6 100%); /* Pale pastel pink and yellow gradient */
+  background-size: 100%;
 }
 
-.about-img {
-    margin-left: 100px;
+body::after {
+  content: "";
+  background: linear-gradient(to bottom, #fdeaea, #f0efeb);
+  background-size: 100%;
+  opacity: 0.5;
 }
 
 
+/* SVG Center */
+.svg-center {
+  text-align: center; 
+}
 
+.svg-center img {
+  max-width: 100%; /* Make sure the SVG does not exceed its container's width */
+  height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+  display: inline-block; /* Ensure the SVG is displayed as an inline-block element */
+}
 
+/* Section Heading Styles */
+h1 span {
+  font-size: 80px; /* Increase font size for greater visibility */
+  font-weight: bold; /* Make letters bold for more impact */
+  text-shadow: 2px 1px 0px #c1566a; /* Create a shadow effect for contrast */
+  margin: 3px; /* Add margin for spacing between letters */
+}
 
+h2 {
+  font-size: 32px; /* Increase font size for section headers */
+  text-align: center;
+}
 
+h3 {
+  font-size: 24px; /* Increase font size for subsection headers */
+  text-align: center;
+}
 
-
- 
-  
+/* Container Styles */
+.mission-container, .faq-container, .contact-container{
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(206, 218, 253, 0.1); /* Consistent light blue background */
+  margin-bottom: 20px;
+  text-align: justify;
+}
