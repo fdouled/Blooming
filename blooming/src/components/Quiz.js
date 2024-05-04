@@ -42,7 +42,6 @@ correct: "PMS is a combination of physical and emotional symptoms that many wome
 answers: ["Ibuprofen", "Aspirin", "Hormonal"], correct: "Hormonal"}];
 
 const resultInitState = {
-  score: 0,
   correctAnswers: 0,
   wrongAnswers: 0
 };
@@ -71,7 +70,6 @@ export function Quiz(props) {
       answer
        ? {
           ...prev,
-          score: prev.score + 5,
           correctAnswers: prev.correctAnswers + 1
        } : {
           ...prev,
@@ -93,7 +91,6 @@ export function Quiz(props) {
       answer
        ? {
           ...prev,
-          score: prev.score - 5,
           correctAnswers: prev.correctAnswers - 1
        } : {
           ...prev,
@@ -103,9 +100,12 @@ export function Quiz(props) {
 
     if (currentQuestion !== 0) {
       setCurrentQuestion(currentQuestion - 1);
-    } else {
-      setCurrentQuestion(0);
     }
+  }
+
+  const retryClick = () => {
+    setResult(resultInitState);
+    setShowResult(false);
   }
 
   return (
@@ -116,7 +116,7 @@ export function Quiz(props) {
       </header>
       <hr/>
       <div className="container">
-        <div id="question">
+        {!showResult ? (<div id="question">
           <h4 className="text-center">
             <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{quiz.length}</span>
           </h4>
@@ -131,18 +131,21 @@ export function Quiz(props) {
             })}
           </ul>
           <div className="footer">
-            <button onClick={prevClick} disabled={currentQuestion === 0} className="button">Previous</button>
+            <button onClick={prevClick} disabled={currentQuestion === 0} className="sencond-btn">Previous</button>
             <button onClick={nextClick} disabled={answerIdx === null} className="button">
               {currentQuestion === quiz.length - 1 ? "Finish" : "Next"}
             </button>
           </div>
-        </div>
-        <div id="results" className="d-none">
+        </div>) :
+        <div id="results">
+          <h3>Results</h3>
           <p>Great work!</p>
-          <p>You got __ out of __ questions correct!</p>
-          <button className="button" id="retry-button">Retry</button>
-          <a href="/quiz" className="btn btn-secondary" id="back-button">Go Back</a>
-        </div>
+          <p>You got {result.correctAnswers} out of {quiz.length} questions correct!</p>
+          <div className="footer">
+            <button className="button" id="retry-button" onClick={retryClick}>Retry</button>
+            <a href="/quiz" className="second-btn" id="back-button">Go Back</a>
+          </div>
+        </div>}
       </div>
     </div>
   );

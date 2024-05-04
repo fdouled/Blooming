@@ -81,6 +81,31 @@ h1, h2, h3 {
   background: #F39E9E;
 }
 
+.second-btn {
+  background: #ffdd88;
+  color: black;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  margin-right: 0.5em;
+  transition: 0.15s;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 18px;
+}
+
+.second-btn:hover {
+  color: black;
+  background: #fccd7b;
+}
+
 .card {
   width: 18rem;
 }
