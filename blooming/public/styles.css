@@ -4,25 +4,6 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
-  padding: 20px;
-  margin-top: 10px;
-}
-
-.about-container, .faq-container, .contact-container {
-  border-radius: 15px;
-  padding: 20px;
-  background-color: rgba(212, 163, 115, 0.171);
-}
-
-.about-container {
-  margin-left: -120px;
-}
-
-.about-img {
-  margin-left: 100px;
-}
-
 .topic, .moods {
   padding: 8px 20px;
   gap: 4px;
@@ -114,19 +95,8 @@ h1, h2, h3 {
   background-image: url(../src/img/learn-background.png);
 }
 
-/* #results {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
-nav.navbar {
-  background-color: #FFF1E6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
+
 
 .answer-choices {
   margin-top: 20px;

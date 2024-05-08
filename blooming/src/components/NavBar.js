@@ -1,49 +1,77 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../img/blooming-logo.png';
+import "../components/nav.css";
 
 export function NavBar(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [prevScrollY, setPrevScrollY] = useState(0);
 
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
+  const handleToggle = () => {
+    setIsActive(!isActive);
   };
 
+  const handleClose = () => {
+    setIsActive(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > prevScrollY) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY]);
+
   return (
-    <nav className="navbar">
-      <Link className="navbar-brand" to="/dashboard" style={{ fontSize: "32px" }}>
-        <img src={logo} width="100" height="100" className="d-inline-block align-top" alt="" />
-        <span style={{ color: "#F39E9E" }}>B</span>
-        <span style={{ color: "#f6b5b5" }}>L</span>
-        <span style={{ color: "#F39E9E" }}>O</span>
-        <span style={{ color: "#f6b5b5" }}>O</span>
-        <span style={{ color: "#F39E9E" }}>M</span>
-        <span style={{ color: "#f6b5b5" }}>I</span>
-        <span style={{ color: "#F39E9E" }}>N</span>
-        <span style={{ color: "#f6b5b5" }}>G</span>
-      </Link>
-      <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className={"collapse navbar-collapse" + (isOpen ? " show" : "")} id="navbarNavDropdown">
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <Link className="nav-link" to="/profile" style={{ fontSize: "24px", margin: "10px 0", color: "#F39E9E" }}>PROFILE</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/dashboard" style={{ fontSize: "24px", margin: "10px 0", color: "#f6b5b5" }}>DASHBOARD</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/learn" style={{ fontSize: "24px", margin: "10px 0", color: "#F39E9E" }}>LEARN</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/quiz" style={{ fontSize: "24px", margin: "10px 0", color: "#f6b5b5" }}>QUIZ</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/about" style={{ fontSize: "24px", margin: "10px 0", color: "#F39E9E" }}>ABOUT</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header className={`header ${isScrolled ? 'scroll-down' : ''}`}>
+      <nav className="navbar">
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link className="nav-logo" to="/dashboard">
+            <img src={logo} alt="" width="100" height="100" />
+          </Link>
+          <Link className="brand" to="/dashboard">
+            <span style={{ color: "#F39E9E" }}>B</span>
+            <span style={{ color: "#f6b5b5" }}>L</span>
+            <span style={{ color: "#F39E9E" }}>O</span>
+            <span style={{ color: "#f6b5b5" }}>O</span>
+            <span style={{ color: "#F39E9E" }}>M</span>
+            <span style={{ color: "#f6b5b5" }}>I</span>
+            <span style={{ color: "#F39E9E" }}>N</span>
+            <span style={{ color: "#f6b5b5" }}>G</span>
+          </Link>
+          <ul className={`nav-menu ${isActive ? 'active' : ''}`}>
+            <NavItem to="/profile" label="PROFILE" onClick={handleClose} />
+            <NavItem to="/dashboard" label="DASHBOARD" onClick={handleClose} />
+            <NavItem to="/learn" label="LEARN" onClick={handleClose} />
+            <NavItem to="/quiz" label="QUIZ" onClick={handleClose} />
+            <NavItem to="/about" label="ABOUT" onClick={handleClose} />
+          </ul>
+        </div>
+        <div className={`hamburger ${isActive ? 'active' : ''}`} onClick={handleToggle}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </nav>
+    </header>
   );
 }
+
+const NavItem = ({ to, label, onClick }) => (
+  <li className="nav-item">
+    <Link className="nav-link" to={to} onClick={onClick}>{label}</Link>
+  </li>
+);
+
+export default NavBar;

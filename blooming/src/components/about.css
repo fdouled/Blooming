@@ -1,55 +1,85 @@
-/* Global Styles */
 body {
-  font-family: 'Comic Sans MS', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fdeaea; /* Very pale pink background color */
-  background-image: linear-gradient(135deg, #f5d5d5 0%, #f9e8ce 50%, #FFF1E6 100%); /* Pale pastel pink and yellow gradient */
-  background-size: 100%;
+  background-image: linear-gradient(135deg, #f5d5d5 0%, #f9e8ce 50%, #FFF1E6 100%); 
 }
 
-body::after {
-  content: "";
-  background: linear-gradient(to bottom, #fdeaea, #f0efeb);
-  background-size: 100%;
-  opacity: 0.5;
-}
-
-
-/* SVG Center */
 .svg-center {
   text-align: center; 
 }
 
 .svg-center img {
-  max-width: 100%; /* Make sure the SVG does not exceed its container's width */
-  height: auto; /* Automatically adjust the height while maintaining aspect ratio */
-  display: inline-block; /* Ensure the SVG is displayed as an inline-block element */
+  max-width: 100%; 
+  height: auto;
+  display: inline-block; 
 }
 
-/* Section Heading Styles */
-h1 span {
-  font-size: 80px; /* Increase font size for greater visibility */
-  font-weight: bold; /* Make letters bold for more impact */
-  text-shadow: 2px 1px 0px #c1566a; /* Create a shadow effect for contrast */
-  margin: 3px; /* Add margin for spacing between letters */
-}
-
-h2 {
-  font-size: 32px; /* Increase font size for section headers */
+.text-center {
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  font-size: 120px; 
+  text-shadow: 2px 1px 0px #c1566a;
   text-align: center;
-}
-
-h3 {
-  font-size: 24px; /* Increase font size for subsection headers */
-  text-align: center;
-}
-
-/* Container Styles */
-.mission-container, .faq-container, .contact-container{
-  border-radius: 10px;
   padding: 20px;
-  background-color: rgba(206, 218, 253, 0.1); /* Consistent light blue background */
+  margin-top: 10px;
+}
+
+.mission-statement, .faq, .contact {
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  text-align: center;
+  font-size: 50px; 
+  font-weight: bold;
+  text-shadow: 2px 1px 0px #c1566a;
+  padding: 20px;
+  margin-top: 10px;
+  color: #fccd7b;
+  letter-spacing: 4px; /* Adjust the value as needed */
+}
+
+.specifics {
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  font-size: 30px; 
+  text-align: center;
+  font-weight: 500; 
+  color: #c1566a;
+  text-shadow: 2px 1px 0px #f9e3bd;
+}
+
+.mission-container {
+  border-radius: 10px;
+  padding: 25px;
+  text-align: justify;
+  background-color: rgba(243, 158, 158, 0.1); 
+}
+
+.faq-container {
+  border-radius: 10px;
+  padding: 25px;
   margin-bottom: 20px;
   text-align: justify;
+  background-color: rgba(243, 158, 158, 0.1); 
+}
+
+.contact-container{
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 100px;
+  text-align: justify;
+  background-color: rgba(243, 158, 158, 0.1); 
+  flex: 1; 
+}
+
+.about-para {
+  color: #c1566a;
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  text-align: center;
+  font-size: 22px; 
+  text-shadow: 2px 1px 0px #f9e3bd;
+}
+
+.reach-out {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.learning-center {
+  position: relative;
+  bottom: 50px; /* Adjust the value as needed */
 }
