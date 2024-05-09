@@ -1,6 +1,8 @@
 import React from "react";
 import { NavBar } from "./NavBar";
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { getDatabase, onValue, ref } from 'firebase/database';
 
 // const quiz1 = [{questionId: "0", question: "Fill in the blanks: The menstrual cycle is a ___ and is controlled by many different __ and the hormones they produce",
 // answers: ["Complex cycle; glands", "Glands; complex cycle", "Simple cycle; organs"], correct: 0},
@@ -39,6 +41,34 @@ import { Link } from 'react-router-dom';
 // answers: ["Ibuprofen", "Aspirin", "Hormonal"], correct: 1}]
 
 export function QuizPage(props) {
+  const [quizData, setQuizData] = useState([]);
+  const db = getDatabase();
+  const quizRef = ref(db, 'quizzes');
+
+  useEffect(() => {
+    const newQuizzes = onValue(quizRef, (snapshot) => {
+      const allQuizObj = snapshot.val();
+      const allQuizKeys = Object.keys(allQuizObj);
+
+      const allQuizzesArray = (allQuizKeys.map((key) => {
+          const singleQuizCopy = {...allQuizObj[key]}; //copy element at that key
+          singleQuizCopy.key = key; //save the key string as an "id" for later
+          return singleQuizCopy; //the transformed object to store in the array
+      }));
+
+      console.log(allQuizzesArray);
+      setQuizData(allQuizzesArray);
+    });
+
+    function cleanup() {
+        console.log("Component is being removed");
+        console.log("turn out the lights");
+        newQuizzes();
+      }
+      return cleanup;
+  }, []);
+
+  // console.log(quizData[0]);
   return (
     <div>
       <NavBar/>
@@ -46,15 +76,20 @@ export function QuizPage(props) {
         <h1 className="text-center">Module Quizzes</h1>
         <p className="text-center subtext">Test your knowledge here!</p>
       </header>
-      <div className="card w-75 container">
-        <div className="card-body">
-          <h5 className="card-title">Menstural Cycle</h5>
-          <p className="card-text">This quiz will test you on your knowledge of your menstrual health, how to maintain hygiene and more.</p>
-          <Link to={'/module-quiz'}>
-            <button className="button">Start</button>
-          </Link>
-        </div>
-      </div>
+        {quizData.map((quiz) => {
+          // console.log(quiz)
+          return (
+            <div className="card w-75 container" style={{backgroundColor: "#faf6ea", border: "1px solid #e9e2cf", marginBottom: "10px"}}>
+              <div className="card-body">
+                <h5 className="card-title">{quiz.title}</h5>
+                <p className="card-text">{quiz.desc}</p>
+                <Link to={'/module-quiz'} state={quiz.questions}>
+                  <button className="button">Start</button>
+                </Link>
+              </div>
+            </div>
+          )
+        })}
     </div>
   );
 }

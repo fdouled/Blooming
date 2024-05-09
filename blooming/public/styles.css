@@ -99,10 +99,41 @@ h1, h2, h3 {
   -webkit-user-select: none;
   user-select: none;
   font-size: 18px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .second-btn:hover {
   color: black;
+  background: #fccd7b;
+}
+
+.second-btn2 {
+  background: #ffdd88;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  margin-right: 0.5em;
+  transition: 0.15s;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 18px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.second-btn2:hover {
   background: #fccd7b;
 }
 
