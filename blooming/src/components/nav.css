@@ -1,0 +1,117 @@
+nav.navbar {
+    background-color: #FFF1E6;
+    padding: 10px 30px;
+    align-items: right;
+    justify-content: space-between;
+  }
+  
+  .header {
+    font-family: 'Yusei Magic', Arial, sans-serif;
+    font-size: 25px;
+    color: #c1566a;
+    text-shadow: 1px .8px 0.1px #f6d6dc;
+    transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+  }
+  
+  .brand {
+    font-size: 40px;
+    text-decoration: none;
+    text-shadow: 1px .8px 0.1px #c1566a;
+    margin-right: 30px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: left;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+  
+
+  .nav-item {
+    margin-right: 1em;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .nav-item a:hover {
+    color: #ffd260;
+    text-shadow: 1px .8px 0.1px #c1566a;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    padding-right: 5px;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #c1566a;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 977px) {
+    .nav-menu {
+      margin-top: 40px;
+      margin-left: auto;
+      background-color: #FFF1E6;
+      position: fixed;
+      left: 100%;
+      top: 5rem;
+      flex-direction: column;
+      width: 30%;
+      border-radius: 1px;
+      text-align: left;
+      transition: 0.4s;
+      box-shadow: 1px 1px 0.2px #f9e3bd;
+    }
+
+
+    .nav-menu.active {
+      position: fixed;
+      right: 0;
+      top: 5rem;
+      z-index: 1000;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+  .header.scroll-down {
+    height: 50px; 
+  }
+  
+  .header.scroll-down .brand {
+    font-size: 30px; 
+    margin-right: 20px; 
+  }
+  
+  .header.scroll-down .nav-menu {
+    display: none; 
+  }
+  
+  .header.scroll-down .hamburger {
+    display: block;
+  }
+  

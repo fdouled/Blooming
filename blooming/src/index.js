@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { App } from './App';
 import { BrowserRouter } from 'react-router-dom'
-import './about.css';
+import './components/about.css';
 import './dashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -11,6 +11,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import 'firebase/analytics';
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
