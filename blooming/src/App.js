@@ -15,7 +15,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 export function App() {
   return (
     <Routes>
-      <Route path="" element={<HomePage />} />
+      <Route path="/" element={<DashboardPage />} />
       <Route path="dashboard" element={ <DashboardPage />} />
       <Route path="learn" element={ <LearnPage />} />
       <Route path="quiz" element={ <QuizPage />}></Route>
