@@ -1,6 +1,8 @@
 import React from "react";
 import { NavBar } from "./NavBar";
 import { Card } from "./Card";
+import { useState, useEffect } from "react";
+import { getDatabase, onValue, ref } from 'firebase/database';
 import "../components/learn.css";
 import image1 from  "../img/module1image.jpg";
 import image2 from  "../img/contraceptionmethods.jpg";
@@ -11,7 +13,34 @@ const modules = [{title: "Menstrual Cycle", desc: "This module is a comprehensiv
 {title: "Sexually Transmitted Infections/Diseases (STIs and STDs)", desc: "This module is a comprehensive overview of the sexually transmitted infections (STIs/STDs).", image: image3}]
 
 export function LearnPage(props) {
-  const moduleCards = modules.map((module) => {
+  const [modulesData, setModulesData] = useState([]);
+  const db = getDatabase();
+  const modulesRef = ref(db, 'modules');
+
+  useEffect(() => {
+    const newModules = onValue(modulesRef, (snapshot) => {
+      const allModuleObj = snapshot.val();
+      const allModuleKeys = Object.keys(allModuleObj);
+
+      const allModulesArray = (allModuleKeys.map((key) => {
+          const singleModuleCopy = {...allModuleObj[key]}; //copy element at that key
+          singleModuleCopy.key = key; //save the key string as an "id" for later
+          return singleModuleCopy; //the transformed object to store in the array
+      }));
+
+      console.log(allModulesArray);
+      setModulesData(allModulesArray);
+    });
+
+    function cleanup() {
+        console.log("Component is being removed");
+        console.log("turn out the lights");
+        newModules();
+      }
+      return cleanup;
+  }, []);
+  console.log(modulesData);
+  const moduleCards = modulesData.map((module) => {
     return <Card module={module}/>
   })
   return (

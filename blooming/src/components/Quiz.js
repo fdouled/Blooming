@@ -83,7 +83,7 @@ export function Quiz(props) {
        }
     );
 
-    if (currentQuestion !== question.length - 1) {
+    if (currentQuestion !== questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setCurrentQuestion(0);
