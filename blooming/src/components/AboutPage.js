@@ -9,7 +9,7 @@ export function AboutPage(props) {
         <div>
             <NavBar />
             <div className="container">
-                <h1 className="text-center"> {
+                <h1 className="blooming-center"> {
                     }
                     <span style={{ color: "#ffdd88" }}>A</span>
                     <span style={{ color: "#fccd7b" }}>B</span>
@@ -55,7 +55,7 @@ export function AboutPage(props) {
                     </div>
                     <div className="contact-container">
                         <p className="about-para">Have a question, suggestion, or just want to say hello? We'd love to hear from you!</p>
-                        <p className="about-para">Contact us at our email: <a href="mailto:blooming@gmail.com">blooming@gmail.com</a></p>
+                        <p className="about-para">Contact us at our email: <a href="mailto:blooming@gmail.com" style={{ color: "#fccd7b" }}>blooming@gmail.com</a></p>
                     </div>
                 </div>
             </div>

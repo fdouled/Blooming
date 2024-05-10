@@ -2,6 +2,7 @@ import React from "react";
 import { NavBar } from "./NavBar";
 import { useState } from "react";
 import { useLocation } from 'react-router-dom';
+import "../components/quiz.css";
 
 // const quiz = [{question: "Fill in the blanks: The menstrual cycle is a _ and is controlled by many different _ and the hormones they produce",
 // answers: ["Complex cycle; glands", "Glands; complex cycle", "Simple cycle; organs"], correct: "Complex cycle; glands"},
@@ -117,15 +118,15 @@ export function Quiz(props) {
     <div>
       <NavBar/>
       <header>
-        <h1 className="text-center">Menstrual Cycle</h1>
+        <h1 className="module-topic">Menstrual Cycle</h1>
       </header>
-      <hr/>
+      <hr style={{ color: "#ffdd88" }}/>
       <div className="container">
         {!showResult ? (<div id="question">
-          <h4 className="text-center">
+          <h4 className="question-tracking">
             <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{questions.length}</span>
           </h4>
-          <h2 className="text-center">{question}</h2>
+          <h2 className="quiz-question">{question}</h2>
           <ul className="answer-choices">
             {answers.map((answer, index) => {
               return (

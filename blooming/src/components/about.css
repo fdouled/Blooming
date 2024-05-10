@@ -12,10 +12,11 @@ body {
   display: inline-block; 
 }
 
-.text-center {
+.blooming-center {
   font-family: 'Yusei Magic', Arial, sans-serif;
   font-size: 120px; 
   text-shadow: 2px 1px 0px #c1566a;
+  padding: 2vw;
   text-align: center;
   padding: 20px;
   margin-top: 10px;
@@ -72,6 +73,16 @@ body {
   text-align: center;
   font-size: 22px; 
   text-shadow: 2px 1px 0px #f9e3bd;
+}
+
+.about-para a {
+  color: #fccd7b; 
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.about-para a:hover {
+  color: #c1566a !important;
+  text-shadow: 2px 1px 0px #f9e3bd !important; 
 }
 
 .reach-out {

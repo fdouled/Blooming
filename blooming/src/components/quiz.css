@@ -1,0 +1,66 @@
+.module-quizzes{
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 67px; 
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #c1566a;
+    padding: 20px;
+    margin-top: 10px;
+    color: #fccd7b;
+    letter-spacing: 4px; 
+}
+
+.test-yourself {
+    color: #c1566a;
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 30px; 
+    text-shadow: 1px 2px 0px #f9e3bd;
+}
+
+  .card-text {
+    color: #c1566a;
+    font-family: 'Yusei Magic';
+    font-size: 20px; 
+  }
+
+    
+  .card-title {
+    font-size: 30px; 
+    font-weight: 600;
+    font-family: 'Yusei Magic';
+    letter-spacing: 4px; 
+  }
+
+  .question-tracking {
+    color: #c1566a;
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 20px; 
+    text-shadow: 1px 1px 0px #f9e3bd;
+  }
+  
+  .quiz-question {
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 25px; 
+    font-weight: bold;
+    letter-spacing: 1px; 
+  }
+
+  .module-topic {
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 50px; 
+    font-weight: bold;
+    text-shadow: 1px 1px 0px #c1566a;
+    margin-top: 10px;
+    color: #fccd7b;
+    letter-spacing: 3px; 
+  }
+
+  .footer{
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+

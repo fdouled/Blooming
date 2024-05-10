@@ -52,6 +52,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
   font-size: 18px;
+  font-family: 'Yusei Magic';
 
   &:disabled {
     cursor: not-allowed;
@@ -108,6 +109,8 @@ body {
   -webkit-user-select: none;
   user-select: none;
   font-size: 18px;
+  font-family: 'Yusei Magic';
+
 
   &:disabled {
     cursor: not-allowed;
@@ -143,6 +146,7 @@ body {
     padding: 11px;
     margin-top: 15px;
     cursor: pointer;
+    font-family: 'Yusei Magic';
   }
 
   .selected-answer {
