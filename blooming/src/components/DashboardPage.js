@@ -8,22 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faFileClipboard } from '@fortawesome/free-regular-svg-icons';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import './dashboard.css';
-
-function PopupNotice({ onClose }) {
-  return (
-    <div className="popup-notice">
-      <p><strong>Notice: Transitioning to Open Source</strong></p>
-      <p> Dear Blooming Community,</p>
-      <p>We're excited to announce that Blooming is transitioning to an open-source project! Starting from 5/10/24, Blooming will be available as an open-source
-        resource for anyone interested in promoting female reproductive health awareness. Thank you for being a part of the Blooming community. Together, we can make a difference in promoting female reproductive health awareness and breaking down harmful stereotypes.
-      <p>Sincerely,</p>
-        Team Blossom
-
- <button onClick={onClose}>Close</button></p>
-    </div>
-  );
-}
+import '../components/dashboard.css';
+import PopupNotice from '../components/PopUp.js';
 
 
 export function DashboardPage(props) {

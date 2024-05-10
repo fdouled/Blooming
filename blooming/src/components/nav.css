@@ -1,8 +1,14 @@
 nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #FFF1E6;
     padding: 10px 30px;
-    align-items: right;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
   }
   
   .header {
@@ -19,6 +25,7 @@ nav.navbar {
     text-shadow: 1px .8px 0.1px #c1566a;
     margin-right: 30px;
   }
+
   
   .nav-menu {
     display: flex;
@@ -75,7 +82,6 @@ nav.navbar {
 
 
     .nav-menu.active {
-      position: fixed;
       right: 0;
       top: 5rem;
       z-index: 1000;
@@ -98,20 +104,5 @@ nav.navbar {
     }
   }
   
-  .header.scroll-down {
-    height: 50px; 
-  }
-  
-  .header.scroll-down .brand {
-    font-size: 30px; 
-    margin-right: 20px; 
-  }
-  
-  .header.scroll-down .nav-menu {
-    display: none; 
-  }
-  
-  .header.scroll-down .hamburger {
-    display: block;
-  }
+
   

@@ -81,6 +81,8 @@ body {
   -webkit-user-select: none;
   user-select: none;
   font-size: 18px;
+  font-family: 'Yusei Magic';
+
 
   &:disabled {
     cursor: not-allowed;

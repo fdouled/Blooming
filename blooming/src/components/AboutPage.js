@@ -8,7 +8,7 @@ export function AboutPage(props) {
     return (
         <div>
             <NavBar />
-            <div className="container">
+            <div className="about-container">
                 <h1 className="blooming-center"> {
                     }
                     <span style={{ color: "#ffdd88" }}>A</span>
