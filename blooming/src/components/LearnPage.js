@@ -3,10 +3,14 @@ import { NavBar } from "./NavBar";
 import { Card } from "./Card";
 import { useState, useEffect } from "react";
 import { getDatabase, onValue, ref } from 'firebase/database';
+import "../components/learn.css";
+import image1 from  "../img/module1image.jpg";
+import image2 from  "../img/contraceptionmethods.jpg";
+import image3 from  "../img/module3image.jpg";
 
-const modules = [{title: "Menstrual Cycle", desc: "description"},
-{title: "Contraception", desc: "description"},
-{title: "Sexually Transmitted Infections/Diseases (STIs and STDs)", desc: "description"}]
+const modules = [{title: "Menstrual Cycle", desc: "This module is a comprehensive overview of the menstrual cycle.", image: image1},
+{title: "Contraception", desc: "This module is a comprehensive overview of contraceptive methods.", image: image2},
+{title: "Sexually Transmitted Infections/Diseases (STIs and STDs)", desc: "This module is a comprehensive overview of the sexually transmitted infections (STIs/STDs).", image: image3}]
 
 export function LearnPage(props) {
   const [modulesData, setModulesData] = useState([]);
