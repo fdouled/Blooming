@@ -56,6 +56,7 @@ export function NavBar(props) {
             <NavItem to="/learn" label="LEARN" onClick={handleClose} />
             <NavItem to="/quiz" label="QUIZ" onClick={handleClose} />
             <NavItem to="/about" label="ABOUT" onClick={handleClose} />
+            <NavItem to="/reflection" label="REFLECTION" onClick={handleClose} />
           </ul>
         </div>
         <div className={`hamburger ${isActive ? 'active' : ''}`} onClick={handleToggle}>

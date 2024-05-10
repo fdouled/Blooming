@@ -10,6 +10,7 @@ import { Quiz } from './components/Quiz';
 import { LearnPage } from './components/LearnPage';
 import { ModulePreview } from './components/ModulePreview';
 import { ModuleLesson } from './components/ModuleLesson';
+import { ReflectionPage } from './components/ReflectionPage';
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -26,6 +27,7 @@ export function App() {
       <Route path="about" element={ <AboutPage />} />
       <Route path='module-preview' element={ <ModulePreview/> } />
       <Route path='module-lesson' element={ <ModuleLesson/> } />
+      <Route path="reflection" element={ <ReflectionPage />} />
     </Routes>
   );
 }
