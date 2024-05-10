@@ -1,6 +1,7 @@
 import React from "react";
 import { NavBar } from "./NavBar";
 import { Card } from "./Card";
+import "../components/learn.css";
 import image1 from  "../img/module1image.jpg";
 import image2 from  "../img/contraceptionmethods.jpg";
 import image3 from  "../img/module3image.jpg";
