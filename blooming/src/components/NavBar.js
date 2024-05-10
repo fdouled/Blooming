@@ -19,13 +19,10 @@ export function NavBar(props) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > prevScrollY) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(currentScrollY > 0); 
       setPrevScrollY(currentScrollY);
     };
+    
 
     window.addEventListener('scroll', handleScroll);
     return () => {

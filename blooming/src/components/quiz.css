@@ -8,6 +8,8 @@
     margin-top: 10px;
     color: #fccd7b;
     letter-spacing: 4px; 
+    margin-top: 150px;
+
 }
 
 .test-yourself {
@@ -64,3 +66,22 @@
     margin-bottom: 20px;
   }
 
+
+  .results {
+    color: #c1566a;
+    font-family: 'Yusei Magic';
+    font-size: 35px; 
+    text-shadow: 1px 1px 0px #f9e3bd;
+  }
+
+  .compliment {
+    font-family: 'Yusei Magic';
+    font-size: 25px; 
+    text-shadow: 1px 1px 0px #f9e3bd;
+  }
+
+  .outcome {
+    font-family: 'Yusei Magic';
+    font-size: 25px; 
+    text-shadow: 1px 1px 0px #f9e3bd;
+  }
