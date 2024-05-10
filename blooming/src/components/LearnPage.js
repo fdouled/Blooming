@@ -13,10 +13,13 @@ const modules = [{title: "Menstrual Cycle", desc: "This module is a comprehensiv
 {title: "Sexually Transmitted Infections/Diseases (STIs and STDs)", desc: "This module is a comprehensive overview of the sexually transmitted infections (STIs/STDs).", image: image3}]
 
 export function LearnPage(props) {
+  // Import modules data from firebase
   const [modulesData, setModulesData] = useState([]);
   const db = getDatabase();
   const modulesRef = ref(db, 'modules');
 
+
+  // Convert the data into an array structure
   useEffect(() => {
     const newModules = onValue(modulesRef, (snapshot) => {
       const allModuleObj = snapshot.val();
@@ -40,9 +43,12 @@ export function LearnPage(props) {
       return cleanup;
   }, []);
   console.log(modulesData);
+
+  // Create a card for each module in the array
   const moduleCards = modulesData.map((module) => {
     return <Card module={module}/>
   })
+  // Render the Learn Page
   return (
     <div>
       <NavBar/>
