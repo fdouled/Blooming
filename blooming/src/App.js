@@ -8,6 +8,8 @@ import { AboutPage } from './components/AboutPage';
 import { QuizPage } from './components/QuizPage';
 import { Quiz } from './components/Quiz';
 import { LearnPage } from './components/LearnPage';
+import { ModulePreview } from './components/ModulePreview';
+import { ModuleLesson } from './components/ModuleLesson';
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
@@ -22,6 +24,8 @@ export function App() {
       <Route path='module-quiz' element={<Quiz />} />
       <Route path="profile" element={ <ProfilePage />} />
       <Route path="about" element={ <AboutPage />} />
+      <Route path='module-preview' element={ <ModulePreview/> } />
+      <Route path='module-lesson' element={ <ModuleLesson/> } />
     </Routes>
   );
 }
