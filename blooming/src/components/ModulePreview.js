@@ -16,7 +16,7 @@ export function ModulePreview(props) {
         <p>This module contains {module.pages.length} parts.</p>
         <Link to={'/learn'}><button className="second-btn">Go Back</button></Link>
         <Link to={'/module-lesson'} state={module}><button className="button">Start</button></Link>
-        <h2>Reflection Questions</h2>
+        <h2>Share Your Thoughts!</h2>
         <p>Talk about your own experiences here! Let's build a community where we can become comfortable talking about these topics!</p>
       </div>
     </div>

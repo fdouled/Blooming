@@ -61,6 +61,8 @@ export function Quiz(props) {
 
   const {question, answers, correct} = questions[currentQuestion];
 
+  // Applies styling when clicking on an answer choice
+  // and checks whether or not the selected answer is correct
   const answerClick = (answer, index) => {
     setAnswerIdx(index);
     if (answer === correct) {
@@ -70,6 +72,8 @@ export function Quiz(props) {
     }
   };
 
+  // This function takes care of updating the state of the quiz after clicking the next button
+  // Updates the current score and question number incrementing it by one
   const nextClick = () => {
     setAnswerIdx(null);
     setResult((prev) =>
@@ -91,6 +95,8 @@ export function Quiz(props) {
     }
   }
 
+  // This function takes care of updating the state of the quiz after clicking the previous button
+  // Updates the current score and question number decrementing it by one
   const prevClick = () => {
     setAnswerIdx(null);
     setResult((prev) =>
@@ -122,7 +128,8 @@ export function Quiz(props) {
       </header>
       <hr style={{ color: "#ffdd88" }}/>
       <div className="container">
-        {!showResult ? (<div id="question">
+        {/*Shows the question or result div depending on the status of the quiz*/
+        !showResult ? (<div id="question">
           <h4 className="question-tracking">
             <span className="current-question">{currentQuestion + 1}</span> out of <span className="total-questions">{questions.length}</span>
           </h4>
@@ -130,6 +137,7 @@ export function Quiz(props) {
           <ul className="answer-choices">
             {answers.map((answer, index) => {
               return (
+                // Renders each of the answer choices for the current question
                 <li onClick={()=>answerClick(answer, index)} key={answer} className={answerIdx === index ? "selected-answer" : null}>
                   {answer}
                 </li>
