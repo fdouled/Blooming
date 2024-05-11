@@ -10,6 +10,7 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../components/dashboard.css';
 import PopupNotice from '../components/PopUp.js';
+import articles from './articles.json';
 
 
 export function DashboardPage(props) {
@@ -33,6 +34,20 @@ export function DashboardPage(props) {
           <h2>Selected Topics of Interest</h2>
           <Topics/>
         </section>
+        {/* Topics of Interest Articles */}
+        <section className="article-container">
+          <div className="row">
+            {articles.articles.map((article, index) => (
+              <div key={index} className="column col-6">
+                <div className="topics-article-tile">
+                  <h3><a className="article-link" href={article.url} target="_blank">{article.title}</a></h3>
+                  <p>Source: {article.source}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* End */}
         <section>
           <h2>Current Modules</h2>
             <div className="moduleTile">
