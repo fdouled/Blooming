@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Menstrual Health",
+      "topics": ["Menstrual Health"],
+      "duration": "7:20hr",
+      "lessons": 20,
+      "totalLessons": 20,
+      "completedLessons": 4
+    },
+    {
+      "id": 2,
+      "title": "Reproductive System Disorders",
+      "topics": ["Reproductive Health"],
+      "duration": "3:50hr",
+      "lessons": 16,
+      "totalLessons": 16,
+      "completedLessons": 1
+    },
+    {
+      "id": 3,
+      "title": "Sexual Health",
+      "topics": ["Sexual Health"],
+      "duration": "3:00hr",
+      "lessons": 8,
+      "totalLessons": 8,
+      "completedLessons": 0
+    },
+    {
+      "id": 4,
+      "title": "Contraception and Family Planning",
+      "topics": ["Contraception", "Family Planning"],
+      "duration": "4:00hr",
+      "lessons": 10,
+      "totalLessons": 10,
+      "completedLessons": 2
+    }
+  ]
+  

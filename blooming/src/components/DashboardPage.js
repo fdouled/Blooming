@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { NavBar } from "./NavBar";
-// import { Welcome } from './components/Welcome';
 import { Topics } from "./Topics";
 import { Link } from "react-router-dom";
 import next from '../img/chevron-right.svg'
@@ -10,51 +9,60 @@ import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import '../components/dashboard.css';
 import PopupNotice from '../components/PopUp.js';
+import modules from './modules.json';
 
 
 export function DashboardPage(props) {
   const [showPopup, setShowPopup] = useState(true);
+  const [selectedTopics, setSelectedTopics] = useState([]);
 
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+
+  const filteredModules = modules.filter(module =>
+    selectedTopics.some(topic => module.topics.includes(topic))
+  );
+  
   return (
     <div>
       <NavBar/>
       {showPopup && <PopupNotice onClose={handleClosePopup} />}
       <div className="container">
         <section>
-          <h1>Welcome Back, Jessica!</h1>
+          <h1>Welcome Back, Samira!</h1>
           <Link to={"/profile"}>
             <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
           </Link>
         </section>
         <section>
           <h2>Selected Topics of Interest</h2>
-          <Topics/>
+          <Topics setSelectedTopics={setSelectedTopics} selectedTopics={selectedTopics} />
         </section>
         <section>
-          <h2>Current Modules</h2>
-            <div className="moduleTile">
+          <h2>Modules to Explore</h2>
+          {filteredModules.map(module => (
+            <div key={module.id} className="moduleTile">
               <div className="moduleInfo">
-                <h3>Menstrual Health</h3>
-                <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />7:20hr</span>
+                <h3>{module.title}</h3>
+                <span><FontAwesomeIcon icon={faClock} style={{ marginRight: '5px' }} />{module.duration}</span>
                 <span className="space-between"></span>
-                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />20 Lessons</span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{ marginRight: '5px' }} />{module.lessons} Lessons</span>
               </div>
               <div style={{ width: 130, height: 130 }}>
-                    <CircularProgressbarWithChildren value={20}>
-                      <div style={{ textAlign: 'center', margin: 10, fontSize: 12}}>
-                        <strong>Status</strong><br />
-                          4 of 20<br />
-                          Lessons Completed
-                        </div>
-                    </CircularProgressbarWithChildren>
+                <CircularProgressbarWithChildren value={module.completedLessons / module.totalLessons}>
+                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
+                    <strong>Status</strong><br />
+                    {module.completedLessons} of {module.totalLessons}<br />
+                    Lessons Completed
+                  </div>
+                </CircularProgressbarWithChildren>
               </div>
             </div>
-          </section>
-          <section>
-            <h2>Modules to Explore</h2>
+          ))}
+        </section>
+        <section>
+            <h2>Current Modules</h2>
             <div className="moduleTile">
               <div className="moduleInfo">
                 <h3>Reproductive System Disorders</h3>
@@ -110,19 +118,19 @@ export function DashboardPage(props) {
           </section>
           <section>
             <h2>Recommended Articles</h2>
-            <div class="article-container">
-              <div class="row">
-                <div class="column col-6">
-                  <div class="article-tile">
-                    <h3><a class="article-link" href="https://www.cdc.gov/hygiene/personal-hygiene/menstrual.html#:~:text=Practice%20Healthy%20Habits%20During%20Your,stay%20comfortable%20during%20your%20period.&text=Wash%20your%20hands%20before%20and,before%20using%20a%20menstrual%20product." target="_blank">
+            <div className="article-container">
+              <div className="row">
+                <div className="column col-6">
+                  <div className="article-tile">
+                    <h3><a className="article-link" href="https://www.cdc.gov/hygiene/personal-hygiene/menstrual.html#:~:text=Practice%20Healthy%20Habits%20During%20Your,stay%20comfortable%20during%20your%20period.&text=Wash%20your%20hands%20before%20and,before%20using%20a%20menstrual%20product." target="_blank">
                     Menstrual Hygiene Management: Best Practices for Health and Comfort
                     </a></h3>
                     <p>Posted Yesterday</p>
                   </div>
                 </div>
-                <div class="column col-6">
-                  <div class="article-tile">
-                    <h3><a class="article-link" href="https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944" target="_blank">
+                <div className="column col-6">
+                  <div className="article-tile">
+                    <h3><a className="article-link" href="https://www.mayoclinic.org/diseases-conditions/menstrual-cramps/diagnosis-treatment/drc-20374944" target="_blank">
                       Managing Menstrual Pain: Effective Strategies and Relief Techniques</a></h3>
                     <p>Posted Last Week</p>
                   </div>
