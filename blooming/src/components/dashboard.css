@@ -44,5 +44,14 @@
   text-decoration: none;
 }
 
+.topics-article-tile {
+  padding: 10px;
+  background-color: rgba(212, 163, 115, 0.2);
+  border-radius: 30px;
+  box-sizing: border-box; 
+  box-shadow: 0 4px 8px #0000001a;
+  margin-top: 14px;
+}
+
 
   
