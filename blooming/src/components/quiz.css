@@ -8,12 +8,11 @@
     margin-top: 10px;
     color: #fccd7b;
     letter-spacing: 4px; 
-    margin-top: 150px;
-
+    margin-top: 160px;
 }
 
 .test-yourself {
-    color: #c1566a;
+   color: #c1566a;
     font-family: 'Yusei Magic';
     text-align: center;
     font-size: 30px; 
@@ -21,17 +20,19 @@
 }
 
   .card-text {
+    text-shadow: 1px .1px .1px #86b9d8;
     color: #c1566a;
     font-family: 'Yusei Magic';
     font-size: 20px; 
   }
 
     
-  .card-title {
-    font-size: 30px; 
+  .quiz-title {
+    font-size: 40px; 
     font-weight: 600;
     font-family: 'Yusei Magic';
     letter-spacing: 4px; 
+    color: #86b9d8;
   }
 
   .question-tracking {
@@ -56,7 +57,7 @@
     font-size: 50px; 
     font-weight: bold;
     text-shadow: 1px 1px 0px #c1566a;
-    margin-top: 10px;
+    margin-top: 180px;
     color: #fccd7b;
     letter-spacing: 3px; 
   }
@@ -71,17 +72,59 @@
     color: #c1566a;
     font-family: 'Yusei Magic';
     font-size: 35px; 
-    text-shadow: 1px 1px 0px #f9e3bd;
-  }
+    text-shadow: 1px 1px 1px #fccd7b;
+    letter-spacing: 2px; 
+    }
 
   .compliment {
     font-family: 'Yusei Magic';
     font-size: 25px; 
-    text-shadow: 1px 1px 0px #f9e3bd;
+    text-shadow: 1px 1px 1px #c1566a;
+    color: #fccd7b;
+    font-weight: bold;
+    letter-spacing: 2px; 
   }
 
   .outcome {
     font-family: 'Yusei Magic';
     font-size: 25px; 
-    text-shadow: 1px 1px 0px #f9e3bd;
+    text-shadow: .1px .1px .1px #86b9d8;
+    font-weight: bold;
+    letter-spacing: 1px; 
   }
+
+
+
+  /*button-starting*/
+
+  .button-starting {
+    background: #ecc1cb;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    border: none;
+    margin-right: 0.5em;
+    transition: 0.15s;
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    font-size: 20px;
+    font-family: 'Yusei Magic';
+  
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+  
+  .button-starting:hover {
+    background: #86b9d8;
+    color: white;
+  }
+
+
+

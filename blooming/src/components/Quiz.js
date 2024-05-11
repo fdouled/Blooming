@@ -152,9 +152,9 @@ export function Quiz(props) {
           </div>
         </div>) :
         <div id="results">
-          <h3 className="results">Results</h3>
-          <p className="compliment" >Great work!</p>
-          <p className="outcome">You got {result.correctAnswers} out of {questions.length} questions correct!</p>
+          <h3 className="results">RESULTS.....</h3>
+          <p className="compliment" >GREAT WORK!</p>
+          <p className="outcome">You got <span style={{color: '#c1566a'}}>{result.correctAnswers}</span> out of <span style={{color: '#c1566a'}}>{questions.length}</span> questions correct!</p>
           <div className="footer">
             <button className="button" id="retry-button" onClick={retryClick}>Retry</button>
             <a href="/quiz" className="second-btn" id="back-button">Go Back</a>

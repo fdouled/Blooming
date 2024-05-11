@@ -61,6 +61,7 @@ body {
 
 .button:hover {
   background: #F39E9E;
+  color: white;
 }
 
 .second-btn {
@@ -90,7 +91,7 @@ body {
 }
 
 .second-btn:hover {
-  color: black;
+  color: white;
   background: #fccd7b;
 }
 
@@ -121,6 +122,7 @@ body {
 
 .second-btn2:hover {
   background: #fccd7b;
+  color: white;
 }
 
 .card {

@@ -64,7 +64,7 @@ nav.navbar {
     transition: all 0.3s ease-in-out;
   }
   
-  @media (max-width: 977px) {
+  @media (max-width: 1175px) {
     .nav-menu {
       margin-top: 40px;
       margin-left: auto;

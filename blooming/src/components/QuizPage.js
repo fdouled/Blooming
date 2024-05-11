@@ -81,10 +81,10 @@ export function QuizPage(props) {
           return (
             <div className="card w-75 container" style={{backgroundColor: "#faf6ea", border: "1px solid #e9e2cf", marginBottom: "10px"}}>
               <div className="card-body">
-                <h5 className="card-title">{quiz.title}</h5>
+                <h5 className="quiz-title">{quiz.title}</h5>
                 <p className="card-text">{quiz.desc}</p>
                 <Link to={'/module-quiz'} state={quiz.questions}>
-                  <button className="button">Start</button>
+                  <button className="button-starting">Start</button>
                 </Link>
               </div>
             </div>
