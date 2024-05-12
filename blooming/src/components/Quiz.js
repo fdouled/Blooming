@@ -50,8 +50,9 @@ const resultInitState = {
 
 export function Quiz(props) {
   const location = useLocation();
-  const questions = location.state;
-  console.log(questions.length);
+  const quiz = location.state;
+  const questions = quiz.questions;
+  console.log(quiz);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answerIdx, setAnswerIdx] = useState(null);
@@ -124,7 +125,7 @@ export function Quiz(props) {
     <div>
       <NavBar/>
       <header>
-        <h1 className="module-topic">Menstrual Cycle</h1>
+        <h1 className="module-topic">{quiz.title}</h1>
       </header>
       <hr style={{ color: "#ffdd88" }}/>
       <div className="container">
