@@ -38,14 +38,7 @@ export function NavBar(props) {
             <img src={logo} alt="" width="100" height="100" />
           </Link>
           <Link className="brand" to="/dashboard">
-            <span style={{ color: "#F39E9E" }}>B</span>
-            <span style={{ color: "#f6b5b5" }}>L</span>
-            <span style={{ color: "#F39E9E" }}>O</span>
-            <span style={{ color: "#f6b5b5" }}>O</span>
-            <span style={{ color: "#F39E9E" }}>M</span>
-            <span style={{ color: "#f6b5b5" }}>I</span>
-            <span style={{ color: "#F39E9E" }}>N</span>
-            <span style={{ color: "#f6b5b5" }}>G</span>
+            <span>BLOOMING</span>
           </Link>
           <ul className={`nav-menu ${isActive ? 'active' : ''}`}>
             <NavItem to="/profile" label="PROFILE" onClick={handleClose} />

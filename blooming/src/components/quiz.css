@@ -69,31 +69,34 @@
 
 
   .results {
-    color: #c1566a;
     font-family: 'Yusei Magic';
     font-size: 35px; 
-    text-shadow: 1px 1px 1px #fccd7b;
     letter-spacing: 2px; 
+    background: linear-gradient(to right,  #c1566a, #fccd7b, #c1566a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     }
 
   .compliment {
     font-family: 'Yusei Magic';
     font-size: 25px; 
-    text-shadow: 1px 1px 1px #c1566a;
-    color: #fccd7b;
     font-weight: bold;
     letter-spacing: 2px; 
+    background: linear-gradient(to right,  #fccd7b, #c1566a, #fccd7b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .outcome {
     font-family: 'Yusei Magic';
+    margin-top: 10px;
     font-size: 25px; 
-    text-shadow: .1px .1px .1px #86b9d8;
     font-weight: bold;
     letter-spacing: 1px; 
+    color: #fccd7b;
+    text-shadow: .5px .1px 0px #c1566a;
+
   }
-
-
 
   /*button-starting*/
 
