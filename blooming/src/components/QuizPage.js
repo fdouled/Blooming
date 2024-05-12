@@ -83,7 +83,7 @@ export function QuizPage(props) {
               <div className="card-body">
                 <h5 className="quiz-title">{quiz.title}</h5>
                 <p className="card-text">{quiz.desc}</p>
-                <Link to={'/module-quiz'} state={quiz.questions}>
+                <Link to={'/module-quiz'} state={quiz}>
                   <button className="button-starting">Start</button>
                 </Link>
               </div>
