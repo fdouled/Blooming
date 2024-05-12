@@ -17,7 +17,7 @@ export function ModulePreview(props) {
       <div className="container">
         <h1 className="preview-title">{module.title}</h1>
         <p className="mod-description">{module.desc}</p>
-        <p className="mod-contains">This module contains <span style={{color: '#7d8c65'}}>{module.pages.length}</span> parts.</p>
+        <p className="mod-contains">This module contains <span style={{color: '#c1566a'}}>{module.pages.length}</span> parts.</p>
         <p className="resource-intro">
           The information contained in this module comes from these websites:
           <ul style={{ listStyle: 'none' }}>

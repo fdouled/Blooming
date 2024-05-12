@@ -3,6 +3,7 @@ import { NavBar } from "./NavBar";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import { getDatabase, onValue, ref } from 'firebase/database';
+import "../components/moduleLesson.css";
 
 export function ModuleLesson(props) {
   const location = useLocation();
@@ -67,18 +68,18 @@ export function ModuleLesson(props) {
     <div>
       <NavBar/>
       <div className="container">
-        <h1>{module.title}</h1>
+        <h1 className="module-title">{module.title}</h1>
         {!showResult ? (
         <div>
-          <h2>{section}</h2>
+          <h2 className="section-title">{section}</h2>
           {subsections.map((subsection) => {
             console.log(subsection.paragraph);
             if(Array.isArray(subsection.paragraph)) {
               return (
                 <div>
-                  <h3>{subsection.subsection}</h3>
+                  <h3 className="section-bullets">{subsection.subsection}</h3>
                   <p>
-                    <ul>
+                    <ul className="bullet-content">
                       {subsection.paragraph.map((listitem) => {
                         return (
                           <li>{listitem}</li>
@@ -91,8 +92,8 @@ export function ModuleLesson(props) {
             } else {
               return (
                 <div>
-                  <h3>{subsection.subsection}</h3>
-                  <p>{subsection.paragraph}</p>
+                  <h3  className="section-title">{subsection.subsection}</h3>
+                  <p className="section-content">{subsection.paragraph}</p>
                 </div>
               )
             }
@@ -105,10 +106,10 @@ export function ModuleLesson(props) {
         </div>
       </div>) :
       <div id="results">
-        <h3 className="results">CONGRATS!</h3>
-        <p>You've completed the {module.title} module!</p>
-        <p>If you would like to take the {module.title} quiz, click on Take Quiz!</p>
-        <p>Or explore our other modules!</p>
+        <h3 className="congrats">CONGRATS!</h3>
+        <p className="completed">You've completed the {module.title} module!</p>
+        <p className="would-like">If you would like to take the {module.title} quiz, click on Take Quiz!</p>
+        <p className="explore-others">Or explore our other modules!</p>
         <div className="footer">
           <Link to={'/module-quiz'} state={quiz}><button className="button">Take Quiz</button></Link>
           <a href="/learn" className="second-btn" id="back-button">Back to Modules</a>
