@@ -35,12 +35,18 @@ export function ModulePreview(props) {
         <Link to={'/module-lesson'} state={module}><button className="button-preview">Start</button></Link>
         <h2 className="share-thoughts">Share Your Thoughts!</h2>
         <p className="lets-talk">Talk about your own experiences here! Let's build a community where we can become comfortable talking about these topics!</p>
-        <div class="reflection-card">
-            <h5 class="reflection-question">What's a tip you have for dealing with period pain?</h5>
-            <p class="write-answer">Write your answer here!</p>
-          <div class="reflection-card-body">
-            <a href="#" class="view-reflections">View Reflections<img className="next-arrow" src={next} alt=""></img></a>
-          </div>
+        <div className="reflections">
+          {module.reflections.map((reflection) => {
+            return (
+              <div className="reflection-card">
+              <h5 className="reflection-question">{reflection.reflectques}</h5>
+              <p className="write-answer">Write your answer here!</p>
+                <div className="reflection-card-body">
+                  <a href="#" className="view-reflections">View Reflections<img className="next-arrow" src={next} alt=""></img></a>
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

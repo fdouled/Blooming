@@ -46,13 +46,13 @@
     color: #c1566a;
     text-shadow: 1px .1px .1px #6d2e3a;
   }
-  
+
   .resource-link:hover {
     color: #86b9d8 !important;
     text-shadow: 1px .1px .1px #5a93c4;
   }
-  
-  
+
+
 .share-thoughts {
     margin-top: 30px;
     font-family: 'Yusei Magic';
@@ -102,12 +102,12 @@
     color: #c1566a;
     text-shadow: .2px .1px .1px #6d303b;
 
-  
+
     &:disabled {
       cursor: not-allowed;
     }
   }
-  
+
   .button-preview:hover {
     background: #86b9d8;
     color: white;
@@ -137,12 +137,12 @@
     text-shadow: .2px .1px .1px #6d303b;
 
 
-  
+
     &:disabled {
       cursor: not-allowed;
     }
   }
-  
+
   .button-back:hover {
     background: #86b9d8;
     color: white;
@@ -163,18 +163,18 @@
     background: linear-gradient(to bottom right, #f5d5d5, #f9e8ce);
 
   }
-  
+
   .reflection-question {
     font-size: 20px;
     font-weight: bold;
-    margin: 35px; 
+    margin: 35px;
     text-align: center;
     font-family: 'Yusei Magic';
     letter-spacing: 2px;
     color: #c1566a;
     text-shadow: .2px .1px .1px #6d303b;
   }
-  
+
   .write-answer {
     font-size: 18px;
     margin: 30px;
@@ -184,7 +184,7 @@
     color: #86b9d8;
     text-shadow: .5px .1px .1px #5a93c4;
   }
-  
+
   .view-reflections {
     display: inline-block;
     text-decoration: none;
@@ -196,7 +196,7 @@
     color: #c1566a;
     text-shadow: .2px .1px .1px #6d303b;
   }
-  
+
   .view-reflections:hover {
     color: #86b9d8;
     text-shadow: .5px .1px .1px #5a93c4;
@@ -204,9 +204,14 @@
     letter-spacing: 1px;
 
   }
-  
+
   .next-arrow {
     width: 1rem;
     vertical-align: middle;
     margin-left: 0.5rem;
+  }
+
+  .reflections {
+    display: flex;
+    justify-content: space-around;
   }
