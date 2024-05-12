@@ -2,18 +2,51 @@ import React from "react";
 import { NavBar } from "./NavBar";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
+import { getDatabase, onValue, ref } from 'firebase/database';
 
 export function ModuleLesson(props) {
   const location = useLocation();
   const module = location.state;
   const pages = module.pages;
-  console.log(pages);
 
   const [currentPage, setCurrentPage] = useState(0);
   const [showResult, setShowResult] = useState(false);
 
   const {section, subsections} = pages[currentPage];
-  console.log(subsections);
+
+  const [quizData, setQuizData] = useState([]);
+  const db = getDatabase();
+  const quizRef = ref(db, 'quizzes');
+
+  useEffect(() => {
+    const newQuizzes = onValue(quizRef, (snapshot) => {
+      const allQuizObj = snapshot.val();
+      const allQuizKeys = Object.keys(allQuizObj);
+
+      const allQuizzesArray = (allQuizKeys.map((key) => {
+          const singleQuizCopy = {...allQuizObj[key]}; //copy element at that key
+          singleQuizCopy.key = key; //save the key string as an "id" for later
+          return singleQuizCopy; //the transformed object to store in the array
+      }));
+
+      console.log(allQuizzesArray);
+      setQuizData(allQuizzesArray);
+    });
+
+    function cleanup() {
+        console.log("Component is being removed");
+        console.log("turn out the lights");
+        newQuizzes();
+      }
+      return cleanup;
+  }, []);
+
+  let quiz = {};
+  quizData.forEach(element => {
+    if(element.title === module.title) {
+      quiz = element;
+    }
+  });
 
   const nextClick = () => {
     if (currentPage !== pages.length - 1) {
@@ -35,68 +68,53 @@ export function ModuleLesson(props) {
       <NavBar/>
       <div className="container">
         <h1>{module.title}</h1>
+        {!showResult ? (
         <div>
-        <h2>{section}</h2>
-        {subsections.map((subsection, index) => {
-        console.log(subsection.paragraph);
-        if(Array.isArray(subsection.paragraph)) {
-          return (
-            <div>
-              <h3>{subsection.subsection}</h3>
-              <p>
-                <ul>
-                  {subsection.paragraph.map((listitem) => {
-                    return (
-                      <li>{listitem}</li>
-                    )
-                  })}
-                </ul>
-              </p>
-            </div>
-          )
-        } else {
-          return (
-            <div>
-              <h3>{subsection.subsection}</h3>
-              <p>{subsection.paragraph}</p>
-            </div>
-          )
-        }
+          <h2>{section}</h2>
+          {subsections.map((subsection) => {
+            console.log(subsection.paragraph);
+            if(Array.isArray(subsection.paragraph)) {
+              return (
+                <div>
+                  <h3>{subsection.subsection}</h3>
+                  <p>
+                    <ul>
+                      {subsection.paragraph.map((listitem) => {
+                        return (
+                          <li>{listitem}</li>
+                        )
+                      })}
+                    </ul>
+                  </p>
+                </div>
+              )
+            } else {
+              return (
+                <div>
+                  <h3>{subsection.subsection}</h3>
+                  <p>{subsection.paragraph}</p>
+                </div>
+              )
+            }
         })}
-        </div>
         <div className="footer">
-            <button onClick={prevClick} disabled={currentPage === 0} className="second-btn2">Previous</button>
-            <button onClick={nextClick} className="button">
-              {currentPage === pages.length - 1 ? "Finish" : "Next"}
-            </button>
-          </div>
-      </div>
+          <button onClick={prevClick} disabled={currentPage === 0} className="second-btn2">Previous</button>
+          <button onClick={nextClick} className="button">
+            {currentPage === pages.length - 1 ? "Finish" : "Next"}
+          </button>
+        </div>
+      </div>) :
+      <div id="results">
+        <h3 className="results">CONGRATS!</h3>
+        <p>You've completed the {module.title} module!</p>
+        <p>If you would like to take the {module.title} quiz, click on Take Quiz!</p>
+        <p>Or explore our other modules!</p>
+        <div className="footer">
+          <Link to={'/module-quiz'} state={quiz}><button className="button">Take Quiz</button></Link>
+          <a href="/learn" className="second-btn" id="back-button">Back to Modules</a>
+        </div>
+      </div>}
     </div>
+  </div>
   )
 }
-
-// <h2>{section}</h2>
-//           {subsections.map((subsection, index) => {
-//             console.log(subsection.paragraph);
-//             if(subsection.paragraph.length > 1) {
-//               return (
-//                 <div>
-//                   <h3>{subsection.subsection}</h3>
-//                   <p>
-//                     <ul>
-//                       {subsection.paragraph.map((listitem) => {
-//                         <li>{listitem}</li>
-//                       })}
-//                     </ul>
-//                   </p>
-//                 </div>
-//               )
-//             } else {
-//               return (
-//                 <div>
-//                   <h3>{subsection.subsection}</h3>
-//                   <p>{subsection.paragraph}</p>
-//                 </div>
-//               )
-//             }
-//             })}
