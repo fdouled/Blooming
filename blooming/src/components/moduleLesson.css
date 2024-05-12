@@ -15,22 +15,22 @@
 
 .section-title {
     font-family: 'Yusei Magic';
-    color: #ecc1cb;
+    color: #86b9d8;
     font-size: 30px;
     letter-spacing: 1px;
     margin-top: 20px;
     font-weight: bold;
-    text-shadow: 1px .1px .1px #c1566a;
+    text-shadow: 1px .1px .1px #233744;
 }
 
 .section-bullets {
     font-family: 'Yusei Magic';
-    color: #fccd7b;
+    color: #86b9d8;
     font-size: 30px;
     letter-spacing: 1px;
     margin-top: 20px;
     font-weight: bold;
-    text-shadow: 1px .1px .1px #6b5125;
+    text-shadow: 1px .1px .1px #692f3a;
 }
 
 .section-content {
@@ -39,16 +39,16 @@
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 20px;
-    text-shadow: .1px .2px .2px #5a93c4;
+    text-shadow: .1px .2px .2px #692f3a;
 }
 
 .bullet-content {
     font-family: 'Yusei Magic';
-    color: #fccd7b;
+    color: #c1566a;
     font-size: 18px;
     letter-spacing: 1px;
     margin-top: 20px;
-    text-shadow: .5px .2px .2px #6b5125;
+    text-shadow: .5px .2px .2px #233744;
 }
 
 
@@ -59,7 +59,7 @@
     font-weight: bold;
     letter-spacing: 2px;
     color: transparent;
-    background: linear-gradient(to right, #86b9d8, #ecc1cb, #86b9d8);
+    background: linear-gradient(to right, #86b9d8, #c1566a, #86b9d8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -84,7 +84,7 @@
     text-align: center;
     letter-spacing: 2px;
     color: transparent;
-    background: linear-gradient(to right, #ecc1cb, #86b9d8, #ecc1cb);
+    background: linear-gradient(to right, #86b9d8, #c1566a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
