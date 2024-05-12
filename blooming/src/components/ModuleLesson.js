@@ -36,15 +36,33 @@ export function ModuleLesson(props) {
       <div className="container">
         <h1>{module.title}</h1>
         <div>
-          <h2>{section}</h2>
-          {subsections.map((subsection, index) => {
-              return (
-                <div>
-                  <h3>{subsection.subsection}</h3>
-                  <p>{subsection.paragraph}</p>
-                </div>
-              )
-            })}
+        <h2>{section}</h2>
+        {subsections.map((subsection, index) => {
+        console.log(subsection.paragraph);
+        if(Array.isArray(subsection.paragraph)) {
+          return (
+            <div>
+              <h3>{subsection.subsection}</h3>
+              <p>
+                <ul>
+                  {subsection.paragraph.map((listitem) => {
+                    return (
+                      <li>{listitem}</li>
+                    )
+                  })}
+                </ul>
+              </p>
+            </div>
+          )
+        } else {
+          return (
+            <div>
+              <h3>{subsection.subsection}</h3>
+              <p>{subsection.paragraph}</p>
+            </div>
+          )
+        }
+        })}
         </div>
         <div className="footer">
             <button onClick={prevClick} disabled={currentPage === 0} className="second-btn2">Previous</button>
@@ -56,3 +74,29 @@ export function ModuleLesson(props) {
     </div>
   )
 }
+
+// <h2>{section}</h2>
+//           {subsections.map((subsection, index) => {
+//             console.log(subsection.paragraph);
+//             if(subsection.paragraph.length > 1) {
+//               return (
+//                 <div>
+//                   <h3>{subsection.subsection}</h3>
+//                   <p>
+//                     <ul>
+//                       {subsection.paragraph.map((listitem) => {
+//                         <li>{listitem}</li>
+//                       })}
+//                     </ul>
+//                   </p>
+//                 </div>
+//               )
+//             } else {
+//               return (
+//                 <div>
+//                   <h3>{subsection.subsection}</h3>
+//                   <p>{subsection.paragraph}</p>
+//                 </div>
+//               )
+//             }
+//             })}
