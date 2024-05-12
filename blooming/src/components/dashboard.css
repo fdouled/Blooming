@@ -1,3 +1,7 @@
+.container {
+  font-family: 'Yusei Magic'; 
+}
+
 .moduleTile {
   display: flex;
   align-items: center;

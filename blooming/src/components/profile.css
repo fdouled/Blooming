@@ -1,0 +1,132 @@
+.profile-container {
+    display: flex;
+    font-family: 'Yusei Magic'; 
+    padding: 1.5rem;
+}
+
+.col-6 {
+    flex: 1; 
+}
+
+.profile-right {
+    width: 300px; 
+    margin-left: auto; 
+    padding: 1.5rem;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+}
+
+.profile-name {
+    display: flex;
+    justify-content: center;
+}
+
+.subtext {
+    font-size: 22px;
+    color: #c1566a;
+}
+
+.quiz-stats {
+    font-size: 20px;
+    font-weight: 300;
+    color: #4b4947;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-switch:before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    left: 2px;
+    top: 2px;
+    transition: transform 0.3s;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    width: 75px;
+    display: inline-block;
+    text-align: left;
+    top: 8px;
+  }
+  .checkbox {
+    display: none;
+  }
+  .label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+  }
+  .inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+  }
+  .inner:before,
+  .inner:after {
+    float: left;
+    width: 50%;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    color: #fff;
+    font-weight: bold;
+    box-sizing: border-box;
+  }
+  .inner:before {
+    content: "YES";
+    padding-left: 30px;
+    background-color: #c1566a;
+    color: #fff;
+  }
+  .inner:after {
+    content: "NO";
+    padding-right: 10px;
+    background-color: #bbb;
+    color: #fff;
+    text-align: right;
+  }
+  .switch {
+    display: none;
+    width: 24px;
+    margin: 5px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+  }
+  .checkbox:checked + .label .inner {
+    margin-left: 0;
+  }
+  .checkbox:checked + .label .switch {
+    right: 0px;
+  }
+  

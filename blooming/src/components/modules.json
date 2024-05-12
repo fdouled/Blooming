@@ -34,6 +34,123 @@
       "lessons": 10,
       "totalLessons": 10,
       "completedLessons": 2
-    }
+    },
+    {
+      "id": 5,
+      "title": "Cervical Health",
+      "topics": ["Cervical Health"],
+      "duration": "2:30hr",
+      "lessons": 12,
+      "totalLessons": 12,
+      "completedLessons": 3
+    },
+    {
+      "id": 6,
+      "title": "Menopause",
+      "topics": ["Menopause"],
+      "duration": "5:00hr",
+      "lessons": 18,
+      "totalLessons": 18,
+      "completedLessons": 5
+    },
+    {
+      "id": 7,
+      "title": "Pregnancy",
+      "topics": ["Pregnancy"],
+      "duration": "6:30hr",
+      "lessons": 24,
+      "totalLessons": 24,
+      "completedLessons": 7
+    },
+    {
+      "id": 8,
+      "title": "Puberty",
+      "topics": ["Puberty"],
+      "duration": "3:45hr",
+      "lessons": 15,
+      "totalLessons": 15,
+      "completedLessons": 2
+    },
+    {
+      "id": 9,
+      "title": "Ovarian Health",
+      "topics": ["Ovarian Health"],
+      "duration": "2:15hr",
+      "lessons": 10,
+      "totalLessons": 10,
+      "completedLessons": 1
+    },
+    {
+      "id": 10,
+      "title": "Testicular Health",
+      "topics": ["Testicular Health"],
+      "duration": "2:30hr",
+      "lessons": 8,
+      "totalLessons": 8,
+      "completedLessons": 0
+    },
+    {
+      "id": 11,
+      "title": "Menstrual Disorders",
+      "topics": ["Menstrual Disorders"],
+      "duration": "4:00hr",
+      "lessons": 18,
+      "totalLessons": 18,
+      "completedLessons": 3
+    },
+    {
+      "id": 12,
+      "title": "Breast Cancer",
+      "topics": ["Breast Cancer"],
+      "duration": "5:30hr",
+      "lessons": 20,
+      "totalLessons": 20,
+      "completedLessons": 5
+    },
+    {
+      "id": 13,
+      "title": "STIs (Sexually Transmitted Infections)",
+      "topics": ["STIs"],
+      "duration": "6:00hr",
+      "lessons": 22,
+      "totalLessons": 22,
+      "completedLessons": 6
+    },
+    {
+      "id": 14,
+      "title": "Hormonal Health",
+      "topics": ["Hormonal Health"],
+      "duration": "3:30hr",
+      "lessons": 14,
+      "totalLessons": 14,
+      "completedLessons": 2
+    },
+    {
+      "id": 15,
+      "title": "Fertility",
+      "topics": ["Fertility"],
+      "duration": "7:00hr",
+      "lessons": 25,
+      "totalLessons": 25,
+      "completedLessons": 8
+    },
+    {
+      "id": 16,
+      "title": "Endocrine Disorders",
+      "topics": ["Endocrine Disorders"],
+      "duration": "4:45hr",
+      "lessons": 19,
+      "totalLessons": 19,
+      "completedLessons": 4
+    },
+    {
+      "id": 17,
+      "title": "Sexual Consent",
+      "topics": ["Sexual Consent"],
+      "duration": "2:00hr",
+      "lessons": 10,
+      "totalLessons": 10,
+      "completedLessons": 0
+    }  
   ]
   
