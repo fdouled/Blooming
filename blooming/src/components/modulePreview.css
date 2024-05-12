@@ -72,7 +72,7 @@
     letter-spacing: .5px;
     margin-top: 20px;
     font-weight: bold;
-    text-shadow: 1px .1px 1px #c1566a;
+    text-shadow: 1px .1px .1px #c1566a;
 }
 
 /* buttons */
@@ -96,7 +96,10 @@
     user-select: none;
     font-size: 24px;
     font-family: 'Yusei Magic';
-    text-shadow: .1px 1px 2px #ffffff;
+    text-shadow: .1px 1px 1px #ffffff;
+    color: #c1566a;
+    text-shadow: .2px .1px .1px #6d303b;
+
   
     &:disabled {
       cursor: not-allowed;
@@ -106,6 +109,7 @@
   .button-preview:hover {
     background: #86b9d8;
     color: white;
+    text-shadow: .1px 1px 1px #ffffff;
   }
 
   .button-back {
@@ -127,7 +131,9 @@
     user-select: none;
     font-size: 24px;
     font-family: 'Yusei Magic';
-    text-shadow: .1px 1px 2px #ffffff;
+    color: #c1566a;
+    text-shadow: .2px .1px .1px #6d303b;
+
 
   
     &:disabled {
@@ -138,6 +144,8 @@
   .button-back:hover {
     background: #86b9d8;
     color: white;
+    text-shadow: .1px 1px 1px #ffffff;
+
   }
 
 
@@ -166,11 +174,11 @@
   .write-answer {
     font-size: 18px;
     margin: 30px;
+    text-align: center;
     color: #86b9d8;
     text-shadow: 1px .1px .1px #5684a0;
     font-family: 'Yusei Magic';
-    letter-spacing: 1px;
-    font-style: italic;
+    letter-spacing: 2px;
   }
   
   .view-reflections {
@@ -189,6 +197,8 @@
     color: #c1566a;
     text-shadow: 1px .1px .1px #ecc1cb;
     font-weight: bold;
+    letter-spacing: 1px;
+
   }
   
   .next-arrow {
