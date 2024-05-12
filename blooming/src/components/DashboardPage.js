@@ -31,7 +31,7 @@ export function DashboardPage(props) {
       {showPopup && <PopupNotice onClose={handleClosePopup} />}
       <div className="container">
         <section>
-          <h1>Welcome Back, Samira!</h1>
+          <h1 style={{marginTop: '155px'}}>Welcome Back, Samira!</h1>
           <Link to={"/profile"}>
             <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
           </Link>
