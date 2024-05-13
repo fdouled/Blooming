@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'; // Import Quill styles
 import { NavBar } from './NavBar'; // Assuming NavBar is in the same directory as ReflectionPage
-import '../components/reflection.css';
+import '../components/Reflection.css';
 
 export function ReflectionPage() {
   const [reflection, setReflection] = useState('');

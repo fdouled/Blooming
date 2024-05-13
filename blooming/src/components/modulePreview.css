@@ -1,5 +1,5 @@
 .preview-title {
-    margin-top: 150px;
+    margin-top: 180px;
     font-family: 'Yusei Magic';
     text-align: center;
     font-size: 50px;
@@ -152,66 +152,89 @@
 
 
   /* relfection card*/
-
   .reflection-card {
-    width: 20rem;
+    width: 300px;
+    padding: 40px;
     background-color: #f5d5d5;
     border: 1px solid #ecc1cb;
     border-radius: 8px;
     box-shadow: .5px .1px 1px #86b9d8;
-    margin-bottom: 200px;
     background: linear-gradient(to bottom right, #f5d5d5, #f9e8ce);
-
+    flex-direction: column;
+    margin-bottom: 200px;
+    align-items: center;
   }
 
+ 
+
+  
+  .reflections-card {
+    width: 500px;
+    padding: 40px;
+    height: 300px; 
+    background-color: #f5d5d5;
+    border: 1px solid #ecc1cb;
+    border-radius: 8px;
+    box-shadow: .5px .1px 1px #86b9d8;
+    background: linear-gradient(to bottom right, #f5d5d5, #f9e8ce);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+
+  
+  /* Adjust padding and margin for smaller screens */
+  @media (max-width: 768px) {
+    .reflection-card {
+      width: calc(100% - 40px); /* Adjusted to make the card full width on smaller screens */
+      padding: 15px; /* Adjusted padding for smaller screens */
+      height: 80px; /* Reduced height of the card for smaller screens */
+    }
+  }
+  
   .reflection-question {
-    font-size: 20px;
+    margin-top: 1px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 35px;
     text-align: center;
     font-family: 'Yusei Magic';
     letter-spacing: 2px;
     color: #c1566a;
     text-shadow: .2px .1px .1px #6d303b;
   }
-
+  
   .write-answer {
-    font-size: 18px;
-    margin: 30px;
+    margin-top: 20px;
+    font-size: 25px;
     text-align: center;
     font-family: 'Yusei Magic';
     letter-spacing: 2px;
     color: #86b9d8;
     text-shadow: .5px .1px .1px #5a93c4;
   }
-
+  
   .view-reflections {
-    display: inline-block;
     text-decoration: none;
-    font-size: 18px;
-    margin: 30px;
-    margin-top: 5px;
+    font-style: italic;
+    font-size: 25px;
     font-family: 'Yusei Magic';
     letter-spacing: 1px;
     color: #c1566a;
     text-shadow: .2px .1px .1px #6d303b;
   }
-
+  
   .view-reflections:hover {
     color: #86b9d8;
     text-shadow: .5px .1px .1px #5a93c4;
     font-weight: bold;
     letter-spacing: 1px;
-
   }
-
+  
   .next-arrow {
     width: 1rem;
     vertical-align: middle;
-    margin-left: 0.5rem;
+    margin-left: 20px;
   }
-
-  .reflections {
-    display: flex;
-    justify-content: space-around;
-  }
+  
+  
