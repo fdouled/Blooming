@@ -11,13 +11,13 @@
 .reflection-page{
   font-family: 'Yusei Magic';
   text-align: center;
-  font-size: 67px; 
+  font-size: 67px;
   font-weight: bold;
   text-shadow: 1px 1px 0px #c1566a;
   padding: 20px;
   margin-top: 10px;
   color: #fccd7b;
-  letter-spacing: 4px; 
+  letter-spacing: 4px;
   margin-top: 15px;
 
 }
@@ -26,14 +26,14 @@
   color: #1f1e1e;
   font-family: 'Yusei Magic';
   text-align: center;
-  font-size: 19px; 
+  font-size: 19px;
   text-shadow: 1px 2px 0px #f9e3bd;
 }
 
 .module-note {
   font-family: 'Yusei Magic';
   text-align: center;
-  font-size: 25px; 
+  font-size: 25px;
   font-weight: bold;
   padding: 10px;
   color: #c1566a;
@@ -98,8 +98,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Center content horizontally */
+  align-content: center; /* Center content horizontally */
 }
 
 .profile-image-container {
