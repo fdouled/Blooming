@@ -15,15 +15,16 @@ nav.navbar {
     font-family: 'Yusei Magic', Arial, sans-serif;
     font-size: 25px;
     color: #c1566a;
-    text-shadow: 1px .8px 0.1px #f6d6dc;
-    transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
+    transition: all 0.3s ease-in-out;
   }
   
   .brand {
-    font-size: 50px;
+    font-size: 60px;
     text-decoration: none;
-    text-shadow: 1px .8px 0.1px #c1566a;
     margin-right: 30px;
+    background: linear-gradient(to right, #86b9d8, #d696a7, #e8a816);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   
@@ -45,8 +46,8 @@ nav.navbar {
   }
   
   .nav-item a:hover {
-    color: #ffd260;
-    text-shadow: 1px .8px 0.1px #c1566a;
+    color: #86b9d8;
+    text-shadow: 1px .8px 0.1px #263c4a;
   }
   
   .hamburger {

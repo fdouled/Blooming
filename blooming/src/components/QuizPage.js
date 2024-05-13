@@ -73,7 +73,7 @@ export function QuizPage(props) {
     <div>
       <NavBar/>
       <header>
-        <h1 className="module-quizzes">Module Quizzes</h1>
+        <h1 className="module-quizzes">MODULE QUIZZES</h1>
         <p className="test-yourself">Test your knowledge here!</p>
       </header>
         {quizData.map((quiz) => {

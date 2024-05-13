@@ -127,7 +127,6 @@ export function Quiz(props) {
       <header>
         <h1 className="module-topic">{quiz.title}</h1>
       </header>
-      <hr style={{ color: "#ffdd88" }}/>
       <div className="container">
         {/*Shows the question or result div depending on the status of the quiz*/
         !showResult ? (<div id="question">

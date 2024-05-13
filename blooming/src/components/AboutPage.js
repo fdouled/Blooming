@@ -42,7 +42,7 @@ export function AboutPage(props) {
                     <h3 className="specifics">WHAT TOPICS DO WE COVER?</h3>
                     <p className="about-para">BLOOMING covers a wide range of topics related to female reproductive health and education, including menstruation, pregnancy, common reproductive disorders, and more. Check out the 'Learn' tab to see what topics we've covered so far.</p>
 
-                    <h3 className="specifics">INFORMATION ACCURACY</h3>
+                    <h3 className="specific">INFORMATION ACCURACY</h3>
                     <p className="about-para">Yes, we strive to provide accurate and up-to-date information sourced from reputable medical organizations, peer-reviewed journals, and trusted health professionals. Our sources are cited for your convenience, but consulting a healthcare provider for personalized advice is essential.</p>
                 </div>
 
@@ -55,7 +55,7 @@ export function AboutPage(props) {
                     </div>
                     <div className="contact-container">
                         <p className="about-para">Have a question, suggestion, or just want to say hello? We'd love to hear from you!</p>
-                        <p className="about-para">Contact us at our email: <a href="mailto:blooming@gmail.com" style={{ color: "#fccd7b" }}>blooming@gmail.com</a></p>
+                        <p className="about-para">Contact us at our email: <a href="mailto:blooming@gmail.com" > blooming@gmail.com </a> </p>
                     </div>
                 </div>
             </div>

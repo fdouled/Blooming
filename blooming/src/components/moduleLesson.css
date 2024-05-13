@@ -1,0 +1,104 @@
+.module-title {
+    margin-top: 180px;
+    font-family: 'Yusei Magic';
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(to right, #86b9d8, #ecc1cb, #fccd7b, #c1566a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.section-title {
+    font-family: 'Yusei Magic';
+    color: #86b9d8;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 1px .1px .1px #233744;
+}
+
+.section-bullets {
+    font-family: 'Yusei Magic';
+    color: #86b9d8;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 1px .1px .1px #692f3a;
+}
+
+.section-content {
+    font-family: 'Yusei Magic';
+    color: #c1566a;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-shadow: .1px .2px .2px #692f3a;
+}
+
+.bullet-content {
+    font-family: 'Yusei Magic';
+    color: #c1566a;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-shadow: .5px .2px .2px #233744;
+}
+
+
+.congrats {
+    margin-top: 10px;
+    font-family: 'Yusei Magic';
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(to right, #86b9d8, #c1566a, #86b9d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.completed {
+    font-family: 'Yusei Magic';
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(to right,  #c1566a, #fccd7b, #c1566a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.would-like {
+    font-family: 'Yusei Magic';
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(to right, #86b9d8, #c1566a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.explore-others {
+    margin-top: 10px;
+    font-family: 'Yusei Magic';
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: transparent;
+    background: linear-gradient(to right,  #fccd7b, #c1566a, #fccd7b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

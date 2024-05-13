@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { NavBar } from "./NavBar";
 import { Topics } from "./Topics";
 import { Moods } from "./Moods";
@@ -43,8 +44,9 @@ export function ProfilePage(props) {
                 <p className="quiz-stats">67% AVERAGE SCORE higher than 84% of users! Nice Job!</p>
               </div>
               <h2 style={{marginTop: '36px'}}>Your Reflections Stats</h2>
-              
+              <Link to={"/reflection"}>
               <button className="button">Edit or view posts</button>
+              </Link>
             </section>
             <section>
               <h2 style={{marginTop: '36px'}}>Topics of Interest</h2>

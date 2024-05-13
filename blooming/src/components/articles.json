@@ -1,40 +1,64 @@
 {
-    "articles": [
-      {
-        "title": "Menstrual Cycle",
-        "url": "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/menstrual-cycle#",
-        "source": "Better Health",
-        "topic": "Menstrual Cycle"
-      },
-      {
-        "title": "STI Prevention",
-        "url": "https://www.cdc.gov/std/prevention/default.htm",
-        "source": "CDC.gov",
-        "topic": "STI Prevention"
-      },
-      {
-        "title": "Endometriosis",
-        "url": "https://www.who.int/news-room/fact-sheets/detail/endometriosis#:~:text=Overview,period%20and%20last%20until%20menopause.",
-        "source": "World Health Organization",
-        "topic": "Endometriosis"
-      },
-      {
-        "title": "Breast Health",
-        "url": "https://www.ucsfhealth.org/education/basic-facts-about-breast-health",
-        "source": "UCSF Health",
-        "topic": "Breast Health"
-      },
-      {
-        "title": "PCOS",
-        "url": "https://www.hopkinsmedicine.org/health/conditions-and-diseases/polycystic-ovary-syndrome-pcos#:~:text=Polycystic%20ovary%20syndrome%20(PCOS)%20is,that%20form%20in%20the%20ovaries.",
-        "source": "John Hopkins Medicine",
-        "topic": "PCOS"
-      },
-      {
-        "title": "Sexual Health Education",
-        "url": "https://www.plannedparenthood.org/learn/for-educators/what-sex-education",
-        "source": "Planned Parenthood",
-        "topic": "Sexual Health Education"
-      }
-    ]
-  }
+  "articles": [
+    {
+      "title": "Menstrual Cycle",
+      "url": "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/menstrual-cycle#",
+      "source": "Better Health",
+      "topics": ["Menstrual Cycle", "Puberty", "Ovarian Health"]
+    },
+    {
+      "title": "STI Prevention",
+      "url": "https://www.cdc.gov/std/prevention/default.htm",
+      "source": "CDC.gov",
+      "topics": ["STI Prevention", "STIs (Sexually Transmitted Infections)"]
+    },
+    {
+      "title": "Menopause",
+      "url": "https://www.mayoclinic.org/diseases-conditions/menopause/symptoms-causes/syc-20353397#:~:text=Menopause%20is%20the%20time%20that,is%20a%20natural%20biological%20process.",
+      "source": "Mayo Clinic",
+      "topics": ["Menopause"]
+    },
+    {
+      "title": "Breast Health",
+      "url": "https://www.ucsfhealth.org/education/basic-facts-about-breast-health",
+      "source": "UCSF Health",
+      "topics": ["Breast Health"]
+    },
+    {
+      "title": "Breast Cancer Awareness",
+      "url": "https://www.cancer.org/cancer/breast-cancer.html",
+      "source": "American Cancer Society",
+      "topics": ["Breast Cancer"]
+    },
+    {
+      "title": "Breast Cancer Screening",
+      "url": "https://www.nhs.uk/conditions/breast-cancer-screening/",
+      "source": "NHS",
+      "topics": ["Breast Cancer"]
+    },
+    {
+      "title": "Breast Cancer Treatment Options",
+      "url": "https://www.cancer.gov/types/breast/patient/breast-treatment-pdq",
+      "source": "National Cancer Institute",
+      "topics": ["Breast Cancer"]
+    },
+    {
+      "title": "Sexual Health Education",
+      "url": "https://www.plannedparenthood.org/learn/for-educators/what-sex-education",
+      "source": "Planned Parenthood",
+      "topics": ["Sexual Health "]
+    },
+    {
+      "title": "Reproductive System Health",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week/basics/healthy-pregnancy/hlv-20049471",
+      "source": "Mayo Clinic",
+      "topics": ["Reproductive Health", "Pregnancy"]
+    },
+    {
+      "title": "Contraception Methods",
+      "url": "https://www.plannedparenthood.org/learn/birth-control",
+      "source": "Planned Parenthood",
+      "topics": ["Contraception"]
+    }
+  ]
+}
