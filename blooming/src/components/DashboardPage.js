@@ -34,7 +34,7 @@ export function DashboardPage(props) {
     selectedTopics.some(topic => article.topics.includes(topic))
   );
 
-  
+
   return (
     <div>
       <NavBar/>
@@ -42,7 +42,7 @@ export function DashboardPage(props) {
       <div className="container">
         <section className="welcomeText">
           <div className="centered-content">
-          <h1 style={{marginTop: '155px'}}>Welcome Back, Samira!</h1>
+          <h1 style={{marginTop: '155px'}}>Welcome Back, Jessica!</h1>
           <Link to={"/profile"}>
             <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
           </Link>
@@ -51,28 +51,6 @@ export function DashboardPage(props) {
         <section>
           <h2 className="headingOne">Selected Topics of Interest</h2>
           <Topics setSelectedTopics={setSelectedTopics} selectedTopics={selectedTopics} />
-        </section>
-        <section className="section-with-spacing">
-          <h2 className="headingTwo">Modules to Explore</h2>
-          {filteredModules.map(module => (
-            <div key={module.id} className="moduleTile">
-              <div className="moduleInfo">
-                <h3>{module.title}</h3>
-                <span><FontAwesomeIcon icon={faClock} style={{ marginRight: '5px' }} />{module.duration}</span>
-                <span className="space-between"></span>
-                <span><FontAwesomeIcon icon={faFileClipboard} style={{ marginRight: '5px' }} />{module.lessons} Lessons</span>
-              </div>
-              <div style={{ width: 130, height: 130 }}>
-                <CircularProgressbarWithChildren value={module.completedLessons / module.totalLessons}>
-                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
-                    <strong>Status</strong><br />
-                    {module.completedLessons} of {module.totalLessons}<br />
-                    Lessons Completed
-                  </div>
-                </CircularProgressbarWithChildren>
-              </div>
-            </div>
-          ))}
         </section>
         <section className="section-with-spacing">
             <h2 className="headingThree">Current Modules</h2>
@@ -116,25 +94,47 @@ export function DashboardPage(props) {
             </div>
             <div className="moduleTile">
               <div className="moduleInfo">
-                <h3>Contraception and Family Planning</h3>
+                <h3>Cervical Health</h3>
                 <div className="moduleMisc">
                 <i className="far fa-clock"></i>
                 <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />4:00hr</span>
                 <span className="space-between"></span>
-                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}}/>10 Lessons</span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}}/>12 Lessons</span>
                 </div>
               </div>
               <div style={{ width: 130, height: 130 }}>
                 <CircularProgressbarWithChildren value={20}>
                   <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
                     <strong>Status</strong><br />
-                      2 of 10<br />
+                      3 of 12<br />
                       Lessons Completed
                     </div>
                 </CircularProgressbarWithChildren>
               </div>
             </div>
           </section>
+        <section className="section-with-spacing">
+          <h2 className="headingTwo">Modules to Explore</h2>
+          {filteredModules.map(module => (
+            <div key={module.id} className="moduleTile">
+              <div className="moduleInfo">
+                <h3>{module.title}</h3>
+                <span><FontAwesomeIcon icon={faClock} style={{ marginRight: '5px' }} />{module.duration}</span>
+                <span className="space-between"></span>
+                <span><FontAwesomeIcon icon={faFileClipboard} style={{ marginRight: '5px' }} />{module.lessons} Lessons</span>
+              </div>
+              <div style={{ width: 130, height: 130 }}>
+                <CircularProgressbarWithChildren value={module.completedLessons / module.totalLessons}>
+                  <div style={{ textAlign: 'center', margin: 10, fontSize: 12 }}>
+                    <strong>Status</strong><br />
+                    {module.completedLessons} of {module.totalLessons}<br />
+                    Lessons Completed
+                  </div>
+                </CircularProgressbarWithChildren>
+              </div>
+            </div>
+          ))}
+        </section>
           {/* Recommended Articles section */}
           <section className="section-with-spacing">
             <h2 className="headingFour">Recommended Articles</h2>

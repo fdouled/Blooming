@@ -37,7 +37,7 @@ export function ProfilePage(props) {
           <div className="col-6">
             <div className="profile-left">
             <h1 className="profile-heading" style={{marginTop: '150px'}}>Overview</h1>
-            <span className="subtext">Welcome back, Samira! Your progress is really great so far. Keep it up!</span>
+            <span className="subtext">Welcome back, Jessica! Your progress is really great so far. Keep it up!</span>
             <section>
               <h2 style={{marginTop: '16px'}}>Your Quiz Stats</h2>
               <div>
@@ -85,7 +85,7 @@ export function ProfilePage(props) {
                 <img src={profilepic} style={{width: '200px', height: '200px'}}/>
               </div>
               <div className="profile-settings">
-                <h2 className="profile-name">Samira Hamid</h2>
+                <h2 className="profile-name">Jessica Hoang</h2>
                 <label htmlFor="privateAccountToggle" style={{marginRight: '60px'}}>Private Account</label>
                 <div className="toggle-switch">
                   <input
