@@ -1,68 +1,77 @@
-/* Styles for the navbar */
 .navbar {
-  position: fixed; /* Fixed position to keep the navbar at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Adjust as per your navbar style */
-  z-index: 1000; /* Ensure the navbar is above other content */
+  z-index: 1000;  
+  background-color: #fff; 
 }
 
-.reflection-page{
-  font-family: 'Yusei Magic';
+.reflection-page {
+  font-family: 'Yusei Magic', sans-serif;
   text-align: center;
   font-size: 67px;
   font-weight: bold;
   text-shadow: 1px 1px 0px #c1566a;
-  padding: 20px;
-  margin-top: 10px;
   color: #fccd7b;
   letter-spacing: 4px;
-  margin-top: 15px;
-
-}
-
-.write-reflection {
-  color: #1f1e1e;
-  font-family: 'Yusei Magic';
-  text-align: center;
-  font-size: 19px;
-  text-shadow: 1px 2px 0px #f9e3bd;
+  margin-top: 180px;  
 }
 
 .module-note {
-  font-family: 'Yusei Magic';
+  font-family: 'Yusei Magic', sans-serif;
   text-align: center;
   font-size: 25px;
   font-weight: bold;
-  padding: 10px;
   color: #c1566a;
   letter-spacing: 4px;
+  padding: 10px;
 }
 
-.reflection-container {
-  max-width: 800px;
-  margin: 20px auto;
+.write-reflection {
+  font-family: 'Yusei Magic', sans-serif;
+  text-align: center;
+  font-size: 19px;
+  color: #1f1e1e;
+  text-shadow: 1px 2px 0px #f9e3bd;
+}
+
+.reflection-content {
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto; 
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent; 
 }
 
-.reflection-box {
-  background-color: #f8f9fa;
-  border-radius: 5px;
-  padding: 20px;
-  margin-bottom: 20px;
+.post.card {
+  margin: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;  
+  border-radius: 5px;  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  width: calc(100% - 30px);  
 }
 
-.prompt {
-  font-weight: bold;
-  margin-bottom: 10px;
+.reflection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  background: none; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .button-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  width: 100%;  
 }
 
 .anonymous-label {
@@ -75,7 +84,7 @@
   color: #fff;
   border: none;
   border-radius: 2px;
-  padding: 5px;
+  padding: 5px 10px; 
   cursor: pointer;
 }
 
@@ -83,35 +92,53 @@
   background-color: #0056b3;
 }
 
-.reflection-card {
-  display: flex;
-  justify-content: center; /* Center the card horizontally */
-  align-items: center; /* Center the card vertically */
-  height: 100vh; /* Full viewport height */
-}
-
-.reflection-content {
-  width: 80%;
-  max-width: 800px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  align-content: center; /* Center content horizontally */
-}
-
-.profile-image-container {
-  flex: 0 0 auto; /* Don't grow, don't shrink, fixed size */
-  margin-right: 20px; /* Space between profile image and text box */
-}
 
 .profile-image {
-  width: 100px; /* Adjust image size as needed */
-  height: 100px;
-  border-radius: 50%; /* Make it circular */
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+  margin-right: 20px; 
+  object-fit: cover; 
 }
 
-.text-box-container {
-  flex: 1; /* Grow to fill available space */
+.post-header {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 10px; 
+}
+
+.post-author, .post-text {
+  display: inline-block; 
+  vertical-align: top; 
+}
+
+
+.submit-button {
+  margin-top: 15px;
+  background: #ecc1cb;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  margin-right: 0.5em;
+  transition: 0.15s;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 24px;
+  font-family: 'Yusei Magic';
+}
+
+.submit-button:hover {
+  background: #86b9d8;
+  color: white;
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
 }
