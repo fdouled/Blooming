@@ -15,9 +15,14 @@
 }
 
 .add-button {
-  background-color: #fccd7b8b;
+  background-color: #ecc1cb;
+  color: black;
   border: none;
   padding: 0.5rem;
   margin-left: 5px;
   margin-top: 10px;
+}
+
+.add-topic {
+  margin: 0 auto;
 }
