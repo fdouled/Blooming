@@ -35,12 +35,13 @@ export function ReflectionPage() {
   const handleSubmitPost = () => {
     // Add logic to submit post, considering 'reflection' and 'anonymous' states
     console.log('Submitting post:', reflection, 'Anonymously?', anonymous);
-    let name = "Jessica Hoang";
-    if(anonymous) {
-      name = "Anonymous";
-    }
-    let post = reflection;
-    reflectionPosts.push({"id": (reflectionPosts.length + 1), "name": name, "post": post});
+    // Updating displayed posts by pushing to array didn't work
+    // let name = "Jessica Hoang";
+    // if(anonymous) {
+    //   name = "Anonymous";
+    // }
+    // let post = reflection;
+    // reflectionPosts.push({"id": (reflectionPosts.length + 1), "name": name, "post": post});
   };
 
   return (
