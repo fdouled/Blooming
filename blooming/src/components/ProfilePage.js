@@ -37,7 +37,7 @@ export function ProfilePage(props) {
           <div className="col-6">
             <div className="profile-left">
             <h1 className="profile-heading" style={{marginTop: '150px'}}>Overview</h1>
-            <span className="subtext">Welcome back, Jessica! Your progress is really great so far. Keep it up!</span>
+            <span className="subtext">Welcome back, Samira! Your progress is really great so far. Keep it up!</span>
             <section>
               <h2 style={{marginTop: '16px'}}>Your Quiz Stats</h2>
               <div>

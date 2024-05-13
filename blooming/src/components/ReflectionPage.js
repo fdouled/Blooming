@@ -57,9 +57,9 @@ export function ReflectionPage() {
       <NavBar />
       <div className="reflection-content">
         <div className="text-box-container">
-          <h1 className="reflection-page">Module Reflection</h1>
-          <h4 className="module-note">Reflect on Modules Content</h4>
-          <p className="write-reflection">Write your reflection on the topic discussed</p>
+          <h1 className="reflection-page"> MODULE REFLECTION </h1>
+          <h4 className="module-note"> Reflect on Modules Content </h4>
+          <p className="write-reflection" > Please remember to be respectful to each other when commenting! This is intended to be a safe space for everyone! </p>
           <label htmlFor="reflection-input" className="prompt">
             How was your first period experience?
           </label>
@@ -77,7 +77,7 @@ export function ReflectionPage() {
               Post Anonymously?
             </label>
             <button className="submit-button" onClick={handleSubmitPost}>
-              Submit post
+              Submit Post
             </button>
           </div>
         </div>

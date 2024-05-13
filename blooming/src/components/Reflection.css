@@ -12,20 +12,26 @@
   text-align: center;
   font-size: 67px;
   font-weight: bold;
-  text-shadow: 1px 1px 0px #c1566a;
-  color: #fccd7b;
   letter-spacing: 4px;
-  margin-top: 180px;  
+  margin-top: 100px;  
+  background: linear-gradient(to right, #c1566a, #86b9d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
 }
 
 .module-note {
   font-family: 'Yusei Magic', sans-serif;
   text-align: center;
-  font-size: 25px;
+  font-size: 40px;
   font-weight: bold;
-  color: #c1566a;
-  letter-spacing: 4px;
+  margin-top: 10px;
+  font-style: italic;
+  letter-spacing: 3px;
   padding: 10px;
+  background: linear-gradient(to right, #c1566a, #fccd7b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .write-reflection {
@@ -34,7 +40,28 @@
   font-size: 19px;
   color: #1f1e1e;
   text-shadow: 1px 2px 0px #f9e3bd;
+  padding-bottom: 15px;
+  
 }
+
+.prompt {
+  font-family: 'Yusei Magic', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: #1f1e1e;
+  color: #86b9d8;
+  text-shadow: 1px .1px .1px #233744;
+  padding-bottom: 5px;
+}
+
+.reflection-input {
+  padding-top: 10px;
+  border-radius: 5px;  
+  box-shadow: 0 2px 5px rgba(107, 104, 104, 0.1); 
+  width: calc(100% - 30px);
+  font-size: 20px;
+}
+
 
 .reflection-content {
   width: 100%; 
@@ -50,10 +77,10 @@
 .post.card {
   margin: 10px;
   padding: 15px;
-  background-color: #f8f9fa;  
+  background-color: #faf6ea;  
   border-radius: 5px;  
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-  width: calc(100% - 30px);  
+  width: calc(100% - 30px);
 }
 
 .reflection-card {
@@ -65,18 +92,21 @@
   background: none; 
   width: 100%; 
   box-sizing: border-box; 
+  font-family: 'Yusei Magic', Arial, sans-serif;
 }
 
 .button-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;  
+  width: 99%;  
 }
 
 .anonymous-label {
   display: flex;
   align-items: center;
+  font-family: 'Yusei Magic', Arial, sans-serif;
+  margin-right: 10px;
 }
 
 .submit-button {
@@ -84,7 +114,7 @@
   color: #fff;
   border: none;
   border-radius: 2px;
-  padding: 5px 10px; 
+  padding: 5px; 
   cursor: pointer;
 }
 
@@ -110,6 +140,8 @@
 .post-author, .post-text {
   display: inline-block; 
   vertical-align: top; 
+  font-family: 'Yusei Magic', Arial, sans-serif;
+
 }
 
 
