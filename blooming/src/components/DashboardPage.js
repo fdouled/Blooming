@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { NavBar } from "./NavBar";
 import { Topics } from "./Topics";
 import { Link } from "react-router-dom";
-import next from '../img/chevron-right.svg'
+// import next from '../img/chevron-right.svg'
+import next from '../img/chevron-right-two.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faFileClipboard } from '@fortawesome/free-regular-svg-icons';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
@@ -30,14 +31,16 @@ export function DashboardPage(props) {
       <NavBar/>
       {showPopup && <PopupNotice onClose={handleClosePopup} />}
       <div className="container">
-        <section>
+        <section className="welcomeText">
+          <div className="centered-content">
           <h1 style={{marginTop: '155px'}}>Welcome Back, Samira!</h1>
           <Link to={"/profile"}>
             <button className="dashButton">Navigate to your profile to log and view your mood tracker<img className="next" src={next} alt=""></img></button>
           </Link>
+          </div>
         </section>
         <section>
-          <h2>Selected Topics of Interest</h2>
+          <h2 className="headingOne">Selected Topics of Interest</h2>
           <Topics setSelectedTopics={setSelectedTopics} selectedTopics={selectedTopics} />
         </section>
         {/* Topics of Interest Articles */}
@@ -54,8 +57,8 @@ export function DashboardPage(props) {
           </div>
         </section>
         {/* End */}
-        <section>
-          <h2>Modules to Explore</h2>
+        <section className="section-with-spacing">
+          <h2 className="headingTwo">Modules to Explore</h2>
           {filteredModules.map(module => (
             <div key={module.id} className="moduleTile">
               <div className="moduleInfo">
@@ -76,14 +79,16 @@ export function DashboardPage(props) {
             </div>
           ))}
         </section>
-        <section>
-            <h2>Current Modules</h2>
+        <section className="section-with-spacing">
+            <h2 className="headingThree">Current Modules</h2>
             <div className="moduleTile">
               <div className="moduleInfo">
                 <h3>Reproductive System Disorders</h3>
+                <div className="moduleMisc">
                 <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />3:50hr</span>
                 <span className="space-between"></span>
                 <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />16 Lessons</span>
+                </div>
               </div>
               <div style={{ width: 130, height: 130}}>
                 <CircularProgressbarWithChildren value={1/16}>
@@ -98,9 +103,11 @@ export function DashboardPage(props) {
             <div className="moduleTile">
               <div className="moduleInfo">
                 <h3>Sexual Health</h3>
+                <div className="moduleMisc">
                 <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />3:00hr</span>
                 <span className="space-between"></span>
                 <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}} />8 Lessons</span>
+                </div>
               </div>
               <div style={{ width: 130, height: 130 }}>
                 <CircularProgressbarWithChildren value={0/8}>
@@ -115,10 +122,12 @@ export function DashboardPage(props) {
             <div className="moduleTile">
               <div className="moduleInfo">
                 <h3>Contraception and Family Planning</h3>
+                <div className="moduleMisc">
                 <i className="far fa-clock"></i>
                 <span><FontAwesomeIcon icon={faClock} style={{marginRight: '5px'}} />4:00hr</span>
                 <span className="space-between"></span>
                 <span><FontAwesomeIcon icon={faFileClipboard} style={{marginRight: '5px'}}/>10 Lessons</span>
+                </div>
               </div>
               <div style={{ width: 130, height: 130 }}>
                 <CircularProgressbarWithChildren value={20}>
@@ -131,8 +140,8 @@ export function DashboardPage(props) {
               </div>
             </div>
           </section>
-          <section>
-            <h2>Recommended Articles</h2>
+          <section className="section-with-spacing">
+            <h2 className="headingFour">Recommended Articles</h2>
             <div className="article-container">
               <div className="row">
                 <div className="column col-6">
