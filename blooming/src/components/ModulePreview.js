@@ -40,7 +40,9 @@ export function ModulePreview(props) {
               <h5 className="reflection-question">{reflection.reflectques}</h5>
               <p className="write-answer">Write your answer here!</p>
               <div className="reflection-card-body">
-                <a href="#" className="view-reflections">View Reflections<img className="next-arrow" src={next} alt="" /></a>
+                <Link to={'/reflection'}> 
+                  <a href="#" className="view-reflections">View Reflections<img className="next-arrow" src={next} alt="" /></a>
+                </Link>
               </div>
             </div>
           ))}
