@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; 
-import { NavBar } from './NavBar'; 
-import '../components/reflection.css'; 
-import HanhNguyen from "../img/Hanh_Nguyen.png"; 
+import 'react-quill/dist/quill.snow.css';
+import { NavBar } from './NavBar';
+import '../components/Reflection.css';
+import HanhNguyen from "../img/Hanh_Nguyen.png";
 import AishaSayed from "../img/Aisha_Sayed.png";
-import Anonymous from "../img/anonmynous.png"; 
-import UserProfile from "../img/profilepic.png"; 
+import Anonymous from "../img/anonmynous.png";
+import UserProfile from "../img/profilepic.png";
 
 let reflectionPosts = [
   {
@@ -42,7 +42,7 @@ export function ReflectionPage() {
         profilePhoto: anonymous ? Anonymous : UserProfile,
         post: reflection
       };
-      reflectionPosts = [...reflectionPosts, newPost]; 
+      reflectionPosts = [...reflectionPosts, newPost];
       setReflection('');
     }
   };
@@ -57,7 +57,7 @@ export function ReflectionPage() {
       <NavBar />
       <div className="reflection-content">
         <div className="text-box-container">
-          <h1 className="reflection-page"> MODULE REFLECTION </h1>
+          <h1 className="reflection-page"> MODULE REFLECTIONS </h1>
           <h4 className="module-note"> Reflect on Modules Content </h4>
           <p className="write-reflection" > Please remember to be respectful to each other when commenting! This is intended to be a safe space for everyone! </p>
           <label htmlFor="reflection-input" className="prompt">
@@ -73,8 +73,9 @@ export function ReflectionPage() {
           />
           <div className="button-row">
             <label className="anonymous-label">
-              <input type="checkbox" checked={anonymous} onChange={() => setAnonymous(!anonymous)} />
-              Post Anonymously?
+              <input type="checkbox" style={{ width: "20px", height: "20px" }} onChange={() => setAnonymous(!anonymous)} />
+              <label htmlFor="anonymous">Post Anonymously?</label>
+
             </label>
             <button className="submit-button" onClick={handleSubmitPost}>
               Submit Post
