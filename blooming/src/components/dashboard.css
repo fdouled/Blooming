@@ -5,7 +5,7 @@
 .moduleTile {
   display: flex;
   align-items: center;
-  background-color: white !important;
+  background-color: #faf6ea !important;
   justify-content: space-between;
   border-radius: 30px;
   padding: 10px;
@@ -31,7 +31,7 @@
 .article-tile {
   padding: 10px;
   /* background-color: rgba(212, 163, 115, 0.2); */
-  background-color: #F5F4F3;
+  background-color: #faf6ea;
   border-radius: 30px;
   box-sizing: border-box; 
   box-shadow: 0 4px 8px #0000001a;
@@ -104,6 +104,7 @@
   text-align: center;
   font-size: 64px;
   margin-bottom: 24px;
+  padding-top: 24px;
   background: linear-gradient(to right, #c1566a, #86b9d8);
    -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
