@@ -19,10 +19,10 @@ export function NavBar(props) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      setIsScrolled(currentScrollY > 0); 
+      setIsScrolled(currentScrollY > 0);
       setPrevScrollY(currentScrollY);
     };
-    
+
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -46,7 +46,6 @@ export function NavBar(props) {
             <NavItem to="/learn" label="LEARN" onClick={handleClose} />
             <NavItem to="/quiz" label="QUIZ" onClick={handleClose} />
             <NavItem to="/about" label="ABOUT" onClick={handleClose} />
-            <NavItem to="/reflection" label="REFLECTION" onClick={handleClose} />
           </ul>
         </div>
         <div className={`hamburger ${isActive ? 'active' : ''}`} onClick={handleToggle}>

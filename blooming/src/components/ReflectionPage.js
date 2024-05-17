@@ -6,6 +6,7 @@ import '../components/Reflection.css';
 import HanhNguyen from "../img/Hanh_Nguyen.png";
 import AishaSayed from "../img/Aisha_Sayed.png";
 import Anonymous from "../img/anonmynous.png";
+import { useLocation } from 'react-router-dom';
 import UserProfile from "../img/profilepic.png";
 
 let reflectionPosts = [
@@ -31,14 +32,20 @@ let reflectionPosts = [
 
 
 export function ReflectionPage() {
+  const location = useLocation();
+  const reflectionQ = location.state;
   const [reflection, setReflection] = useState('');
   const [anonymous, setAnonymous] = useState(false);
+
+  console.log(reflectionQ);
+
+  const question = reflectionQ !== null ? reflectionQ.reflectques : "What was your first period experience like?";
 
   const handleSubmitPost = () => {
     if (reflection.trim() !== '') {
       const newPost = {
         id: reflectionPosts.length + 1,
-        name: anonymous ? "Anonymous" : "Samira",
+        name: anonymous ? "Anonymous" : "Jessica Hoang",
         profilePhoto: anonymous ? Anonymous : UserProfile,
         post: reflection
       };
@@ -61,7 +68,7 @@ export function ReflectionPage() {
           <h4 className="module-note"> Reflect on Modules Content </h4>
           <p className="write-reflection" > Please remember to be respectful to each other when commenting! This is intended to be a safe space for everyone! </p>
           <label htmlFor="reflection-input" className="prompt">
-            How was your first period experience?
+            {question}
           </label>
           <ReactQuill
             id="reflection-input"
