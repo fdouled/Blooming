@@ -14,7 +14,7 @@ export function Card(props) {
     imageSource = module1Image;
   } else if (card.title === "Contraception") {
     imageSource = module2Image;
-  } else if (card.title === "Sexually Transmitted Infections/Diseases (STIs and STDs)") {
+  } else if (card.title === "Sexually Transmitted Infections/Diseases") {
     imageSource = module3Image;
   }
 
